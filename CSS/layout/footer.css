@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+/*----- Remove default color on click in mobile view -----*/
 *:focus:active {
     -webkit-tap-highlight-color: transparent;
 }
@@ -12,6 +13,7 @@ body {
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
+/*----- The whole footer flex, centered and with padding -----*/
 .footer {
     display: flex;
     flex-direction: column;
@@ -22,6 +24,7 @@ body {
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
+/*----- Maintain max width and border on newsletter window -----*/
 .newsletter-container {
     max-width: 30rem;
     padding: 1.25rem;
@@ -30,17 +33,20 @@ body {
     text-align: center;
 }
 
+/*----- "Subscribe" text not bold -----*/
 .newsletter-container h6 {
     font-size: 1rem;
     margin: 0;
     font-weight: normal;
 }
 
+/*----- "Subscribe" text bold -----*/
 .newsletter-container h5 {
     font-size: 1.25rem;
     font-weight: 500;
 }
 
+/*----- Label fix, margin on "Din emailadress" -----*/
 .newsletter-container label {
     display: block;
     text-align: left;
@@ -48,6 +54,7 @@ body {
     font-size: 0.8rem;
 }
 
+/*----- Input field details -----*/
 .newsletter-container input[type="email"] {
     width: 100%;
     padding: 0;
@@ -59,6 +66,7 @@ body {
     display: block;
 }
 
+/*----- Center and margins on checkbox "Jag accepterar integritetspolicyn" -----*/
 .checkbox-container {
     display: flex;
     align-items: center;
@@ -68,6 +76,7 @@ body {
     margin-top: 0.6rem;
 }
 
+/*----- Label fix, margin on "Jag accepterar" -----*/
 .checkbox-container label {
     display: block;
     text-align: left;
@@ -75,16 +84,19 @@ body {
     font-size: 0.8rem;
 }
 
+/*----- Style on link to "integritetspolicy" -----*/
 .checkbox-container a {
     color: #000;
     text-decoration: none;
     text-decoration: underline;
 }
 
+/*----- Style on link to "integritetspolicy", unnecessary but saved for possible changes -----*/
 .checkbox-container a:hover {
     text-decoration: underline;
 }
 
+/*----- Button "PRENUMERERA" size, margin and style -----*/
 .subscribe-button {
     width: 50%;
     padding: 0.6rem;
@@ -99,15 +111,18 @@ body {
     border-radius: 0;
 }
 
+/*----- Button "PRENUMERERA" hover effect -----*/
 .subscribe-button:hover {
     background-color: #f0f0f0;
     color: #000;
 }
 
+/*----- Button "PRENUMERERA" background on press -----*/
 .subscribe-button:active {
     background-color: #e0e0e0;
 }
 
+/*----- Dropdown menus centered and with margin -----*/
 .footer-links {
     display: flex;
     flex-direction: column;
@@ -116,11 +131,13 @@ body {
     gap: 0.75rem;
 }
 
+/*----- Each dropdown title centered and 100% width within flex -----*/
 details {
     width: 100%;
     text-align: center;
 }
 
+/*----- Dropdown title style -----*/
 summary {
     cursor: pointer;
     font-weight: 400;
@@ -145,6 +162,7 @@ details[open] > summary::after{
     content: "\f106";
 }
 
+/*----- Contact info style -----*/
 .contact-content {
     text-decoration: none !important;
     margin-bottom: 3rem !important;
@@ -154,6 +172,7 @@ details[open] > summary::after{
     padding: 0.7rem;
 }
 
+/*----- Dropdown content style -----*/
 .dropdown-content p {
     font-size: 1.125rem;
     text-decoration: underline;
@@ -162,10 +181,12 @@ details[open] > summary::after{
     margin: 0;
 }
 
+/*----- Dropdown content style on hover, unnecessary but saved for possible changes -----*/
 .dropdown-content p:hover {
     background-color: #fff;
 }
 
+/*----- Social icons style -----*/
 .footer-social-icons {
     max-width: 2rem;
 }
@@ -186,6 +207,7 @@ details[open] > summary::after{
     stroke: #88f071;
 }
 
+/*----- Payment icons style -----*/
 .payment-icons {
     display: flex;
     gap: 2.5rem;

@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+*:focus:active {
+    -webkit-tap-highlight-color: transparent;
+}
     
 body {
     font-family: 'IBM Plex Sans', sans-serif;
@@ -17,19 +21,106 @@ body {
     color: #333;
     font-family: 'IBM Plex Sans', sans-serif;
 }
-    
+
+.newsletter-container {
+    max-width: 30rem;
+    padding: 1.25rem;
+    border: 0.1rem solid black;
+    background-color: transparent;
+    text-align: center;
+}
+
+.newsletter-container h6 {
+    font-size: 1rem;
+    margin: 0;
+    font-weight: normal;
+}
+
+.newsletter-container h5 {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.newsletter-container label {
+    display: block;
+    text-align: left;
+    margin-top: 1.25rem;
+    font-size: 0.8rem;
+}
+
+.newsletter-container input[type="email"] {
+    width: 100%;
+    padding: 0;
+    margin: 0 1.25rem auto auto;
+    border: none;
+    border-bottom: 0.1rem solid #000;
+    background-color: transparent;
+    font-size: 0.8rem;
+    display: block;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    font-size: 0.8rem;
+    margin-top: 0.6rem;
+}
+
+.checkbox-container label {
+    display: block;
+    text-align: left;
+    margin: 0.6rem;
+    font-size: 0.8rem;
+}
+
+.checkbox-container a {
+    color: #000;
+    text-decoration: none;
+    text-decoration: underline;
+}
+
+.checkbox-container a:hover {
+    text-decoration: underline;
+}
+
+.subscribe-button {
+    width: 50%;
+    padding: 0.6rem;
+    margin-top: 1.25rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #333;
+    background-color: #fff;
+    border: 0.1rem solid #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 0;
+}
+
+.subscribe-button:hover {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+.subscribe-button:active {
+    background-color: #e0e0e0;
+}
+
 .footer-links {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 5rem;
     gap: 0.75rem;
 }
-    
+
 details {
     width: 100%;
     text-align: center;
 }
-    
+
 summary {
     cursor: pointer;
     font-weight: 400;
@@ -40,7 +131,7 @@ summary {
     align-items: center;
     width: 100%;
 }
-    
+
 details > summary::after {
     content: "\f107";
     font-family: "Font Awesome 5 Free";
@@ -56,12 +147,13 @@ details[open] > summary::after{
 
 .contact-content {
     text-decoration: none !important;
+    margin-bottom: 3rem !important;
 }
     
 .dropdown-content {
     padding: 0.7rem;
 }
-    
+
 .dropdown-content p {
     font-size: 1.125rem;
     text-decoration: underline;
@@ -69,7 +161,7 @@ details[open] > summary::after{
     padding: 0.3rem 0;
     margin: 0;
 }
-    
+
 .dropdown-content p:hover {
     background-color: #fff;
 }
@@ -79,7 +171,7 @@ details[open] > summary::after{
 }
     
 .social-icons {
-    margin: 1.5rem 0;
+    margin: 2rem 0;
     font-size: 1.5rem;
     display: flex;
     gap: 1.5rem;
@@ -93,7 +185,7 @@ details[open] > summary::after{
 .social-icon:hover {
     stroke: #88f071;
 }
-    
+
 .payment-icons {
     display: flex;
     gap: 2.5rem;

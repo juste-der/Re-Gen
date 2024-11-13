@@ -3,20 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
     <meta name="description" content="Add description" />
-
     <title>ReGen Officiella Webbplats</title>
+    <link rel="stylesheet" href="/CSS/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=IBM+Plex+Sans+JP&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div class="header">
-      <div class="nav-menu"></div>
-      <a href="/">
-        <img src="/images/ReGen-logo.png" alt="Website logo" class="logo" />
-      </a>
-    </div>
+    <header>
+      <input type="checkbox" id="nav_check" hidden />
+      <label for="nav_check" class="hamburger">
+        <img src="/icons/hamburger.svg" alt="Menu" />
+      </label>
+
+      <nav class="nav-links">
+        <label for="nav_check" class="close-btn">
+          <img src="/icons/cross.svg" alt="Close menu" />
+        </label>
+        <input type="text" placeholder="Vad letar du efter?" />
+
+        <ul>
+          <li><a href="" class="active">Nyheter</a></li>
+          <li><a href="">Inspiration</a></li>
+          <li><a href="">Möbler</a></li>
+          <li><a href="">Inredning</a></li>
+          <img src="/icons/line.svg" alt="" />
+          <li><a href="">Mina Sidor</a></li>
+          <li><a href="">Kundservice</a></li>
+          <li><a href="">Ändra Språk</a></li>
+        </ul>
+      </nav>
+      <div class="logo-homepage">
+        <a href="/">
+          <img src="/images/ReGen-logo.png" alt="Website logo" />
+        </a>
+      </div>
+      <div class="shopping-cart">
+        <img src="/icons/cart.svg" alt="Shopping cart" />
+        <p>Kundkorg</p>
+      </div>
+    </header>
+
+    <script src="/javascript/script.js"></script>
   </body>
 </html>

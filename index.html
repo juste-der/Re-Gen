@@ -12,22 +12,22 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=IBM+Plex+Sans+JP&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=IBM+Plex+Sans+JP&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header>
-      <input type="checkbox" id="nav_check" hidden />
-      <label for="nav_check" class="hamburger">
-        <img src="/icons/hamburger.svg" alt="Menu" />
-      </label>
-
-      <nav class="nav-links">
-        <label for="nav_check" class="close-btn">
-          <img src="/icons/cross.svg" alt="Close menu" />
-        </label>
-        <input type="text" placeholder="Vad letar du efter?" />
-
+    <div class="header">
+      <img src="/icons/hamburger.svg" alt="Side Menu" onclick="openNav()" />
+      <div id="sidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
         <ul>
-          <li><a href="" class="active">Nyheter</a></li>
+          <li><a href="">Nyheter</a></li>
           <li><a href="">Inspiration</a></li>
           <li><a href="">Möbler</a></li>
           <li><a href="">Inredning</a></li>
@@ -36,7 +36,7 @@
           <li><a href="">Kundservice</a></li>
           <li><a href="">Ändra Språk</a></li>
         </ul>
-      </nav>
+      </div>
       <div class="logo-homepage">
         <a href="/">
           <img src="/images/ReGen-logo.png" alt="Website logo" />
@@ -46,8 +46,7 @@
         <img src="/icons/cart.svg" alt="Shopping cart" />
         <p>Kundkorg</p>
       </div>
-    </header>
-
+    </div>
     <script src="/javascript/script.js"></script>
   </body>
 </html>

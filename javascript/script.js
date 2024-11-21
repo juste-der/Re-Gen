@@ -1,11 +1,11 @@
 function openNav() {
   const sidenav = document.getElementById("sidenav");
 
-  if (window.innerWidth <= 767) {
+  if (window.innerWidth <= 430) {
     sidenav.style.width = "100vw";
     sidenav.style.height = "100vh";
   } else {
-    sidenav.style.width = "22.4rem";
+    sidenav.style.width = "24rem";
     sidenav.style.height = "48rem";
   }
 }

@@ -21,20 +21,77 @@
   </head>
   <body>
     <div class="header">
-      <img src="/icons/hamburger.svg" alt="Side Menu" onclick="openNav()" />
+      <div class="hamburger-btn">
+        <img src="/icons/hamburger.svg" alt="Side Menu" onclick="openNav()" />
+        <p>MENY</p>
+      </div>
       <div id="sidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
           >&times;</a
         >
+        <div class="menu-items">
+          <input
+            class="searchInput"
+            id="search-field"
+            type="search"
+            placeholder="Vad letar du efter?"
+          />
+          <ul>
+            <li>
+              <a href="#"> Nyheter</a
+              ><img src="/icons/arrow.svg" alt="News icon" />
+            </li>
+            <li>
+              <a href="#">Inspiration</a
+              ><img src="/icons/arrow.svg" alt="Inspiration icon" />
+            </li>
+            <li>
+              <a href="#"> Möbler</a
+              ><img src="/icons/arrow.svg" alt="Furniture icon" />
+            </li>
+            <li>
+              <a href="#"> Inredning</a
+              ><img src="/icons/arrow.svg" alt="Decor icon" />
+            </li>
+            <li>
+              <img src="/icons/green-heart.svg" alt="" />
+              <a href="#"> Favoriter</a>
+              <img src="/icons/arrow.svg" alt="" />
+            </li>
+          </ul>
+          <ul>
+            <img
+              src="/icons/line.svg"
+              alt="Divider line"
+              class="menu-divider"
+            />
+            <li>
+              <a href="#"> Mina Sidor</a
+              ><img src="/icons/arrow.svg" alt="My Pages icon" />
+            </li>
+            <li>
+              <a href="#">Kundservice</a
+              ><img src="/icons/arrow.svg" alt="Customer Service icon" />
+            </li>
+            <li>
+              <a href="#">Ändra Språk</a
+              ><img src="/icons/arrow.svg" alt="Change Language icon" />
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="left-side">
+        <input
+          class="searchInput"
+          id="search-field"
+          type="search"
+          placeholder="Vad letar du efter?"
+        />
         <ul>
-          <li><a href="">Nyheter</a></li>
-          <li><a href="">Inspiration</a></li>
-          <li><a href="">Möbler</a></li>
-          <li><a href="">Inredning</a></li>
-          <img src="/icons/line.svg" alt="" />
-          <li><a href="">Mina Sidor</a></li>
-          <li><a href="">Kundservice</a></li>
-          <li><a href="">Ändra Språk</a></li>
+          <li><a href="#">NYHETER</a></li>
+          <li><a href="#">MÖBLER</a></li>
+          <li><a href="#">INREDNING</a></li>
+          <li><a href="#">REA</a></li>
         </ul>
       </div>
       <div class="logo-homepage">
@@ -42,9 +99,19 @@
           <img src="/images/ReGen-logo.png" alt="Website logo" />
         </a>
       </div>
-      <div class="shopping-cart">
-        <img src="/icons/cart.svg" alt="Shopping cart" />
-        <p>Kundkorg</p>
+      <div class="right-side">
+        <div class="shopping-cart">
+          <a href="#">
+            <img src="/icons/cart.svg" alt="Shopping cart" />
+            <p>FÖRBOKA</p>
+          </a>
+        </div>
+        <div class="favorites">
+          <a href="#"
+            ><img src="/icons/heart.svg" alt="" />
+            <p>FAVORITER</p></a
+          >
+        </div>
       </div>
     </div>
     <script src="/javascript/script.js"></script>

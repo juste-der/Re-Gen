@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: #ffffff;
+    color: #333;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+    
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+    
+details {
+    width: 100%;
+    text-align: center;
+}
+    
+summary {
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 1.25rem;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+    
+details > summary::after {
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 1rem;
+    margin-left: 0.7rem;
+    transition: transform 0.3s ease, content 0.3s ease;
+}
+    
+details[open] > summary::after{
+    content: "\f106";
+}
+
+.contact-content {
+    text-decoration: none !important;
+}
+    
+.dropdown-content {
+    padding: 0.7rem;
+}
+    
+.dropdown-content p {
+    font-size: 1.125rem;
+    text-decoration: underline;
+    color: #333;
+    padding: 0.3rem 0;
+    margin: 0;
+}
+    
+.dropdown-content p:hover {
+    background-color: #fff;
+}
+
+.footer-social-icons {
+    max-width: 2rem;
+}
+    
+.social-icons {
+    margin: 1.5rem 0;
+    font-size: 1.5rem;
+    display: flex;
+    gap: 1.5rem;
+}
+    
+.social-icon {
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+    
+.social-icon:hover {
+    stroke: #88f071;
+}
+    
+.payment-icons {
+    display: flex;
+    gap: 2.5rem;
+    margin-top: 0.6px;
+}
+    
+.payment-icons img {
+    max-width: 3rem;
+    max-height: 1.5rem;
+}

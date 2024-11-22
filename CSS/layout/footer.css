@@ -271,7 +271,7 @@ details[open] > summary::after{
 
 .d-footer-top-logo {
     grid-column: 1 / span 2;
-    max-height: 2rem;
+    max-height: 3rem;
     align-self: center;
     justify-self: center;
 }

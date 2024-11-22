@@ -1,20 +1,10 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 /*----- Remove default color on click in mobile view -----*/
 *:focus:active {
     -webkit-tap-highlight-color: transparent;
 }
-    
-body {
-    font-family: 'IBM Plex Sans', sans-serif;
-}
 
 /*----- The whole footer flex, centered and with padding -----*/
-.footer {
+.m-footer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,84 +15,88 @@ body {
 }
 
 /*----- Maintain max width and border on newsletter window -----*/
-.newsletter-container {
-    max-width: 30rem;
+.m-newsletter-container, .d-newsletter-container {
+    max-width: 25rem;
     padding: 1.25rem;
-    border: 0.1rem solid black;
+    /*border: 0.1rem solid black;*/
     background-color: transparent;
-    text-align: center;
+    text-align: left;
+}
+
+.d-newsletter-container {
+    padding: 0;
+    margin-top: 1rem;
+    border: none !important;
 }
 
 /*----- "Subscribe" text not bold -----*/
-.newsletter-container h6 {
-    font-size: 1rem;
-    margin: 0;
-    font-weight: normal;
-}
-
-/*----- "Subscribe" text bold -----*/
-.newsletter-container h5 {
-    font-size: 1.25rem;
+.m-newsletter-container h6, .d-newsletter-container h6 {
+    font-size: var(--font-size-large);
+    margin: 0 0 1rem 0;
     font-weight: 500;
 }
 
 /*----- Label fix, margin on "Din emailadress" -----*/
-.newsletter-container label {
+.m-newsletter-container label, .d-newsletter-container label {
     display: block;
     text-align: left;
-    margin-top: 1.25rem;
-    font-size: 0.8rem;
+    margin: 1.25rem 0;
+    font-size: var(--font-size-xsmall);
 }
 
 /*----- Input field details -----*/
-.newsletter-container input[type="email"] {
+.m-newsletter-container input[type="email"], .d-newsletter-container input[type="email"] {
     width: 100%;
     padding: 0;
     margin: 0 1.25rem auto auto;
     border: none;
     border-bottom: 0.1rem solid #000;
     background-color: transparent;
-    font-size: 0.8rem;
+    font-size: var(--font-size-small);
     display: block;
 }
 
+::placeholder {
+    opacity: 0.3;
+}
+
 /*----- Center and margins on checkbox "Jag accepterar integritetspolicyn" -----*/
-.checkbox-container {
+.m-checkbox-container, .d-checkbox-container {
     display: flex;
     align-items: center;
     justify-content: center;
     align-content: center;
-    font-size: 0.8rem;
+    font-size: var(--font-size-xsmall);
     margin-top: 0.6rem;
 }
 
 /*----- Label fix, margin on "Jag accepterar" -----*/
-.checkbox-container label {
+.m-checkbox-container label, .d-checkbox-container label {
     display: block;
     text-align: left;
     margin: 0.6rem;
-    font-size: 0.8rem;
+    font-size: var(--font-size-xsmall);
 }
 
 /*----- Style on link to "integritetspolicy" -----*/
-.checkbox-container a {
+.m-checkbox-container a, .d-checkbox-container a {
     color: #000;
     text-decoration: none;
     text-decoration: underline;
 }
 
 /*----- Style on link to "integritetspolicy", unnecessary but saved for possible changes -----*/
-.checkbox-container a:hover {
+.m-checkbox-container a:hover, .d-checkbox-container a:hover {
     text-decoration: underline;
 }
 
 /*----- Button "PRENUMERERA" size, margin and style -----*/
-.subscribe-button {
-    width: 50%;
+.m-subscribe-button, .d-subscribe-button {
+    width: 100%;
     padding: 0.6rem;
-    margin-top: 1.25rem;
-    font-size: 0.8rem;
-    font-weight: bold;
+    margin-top: 0.8rem;
+    font-size: var(--font-size-xsmall);
+    font-weight: normal;
     color: #333;
     background-color: #fff;
     border: 0.1rem solid #333;
@@ -112,18 +106,18 @@ body {
 }
 
 /*----- Button "PRENUMERERA" hover effect -----*/
-.subscribe-button:hover {
+.m-subscribe-button:hover, .d-subscribe-button:hover {
     background-color: #f0f0f0;
     color: #000;
 }
 
 /*----- Button "PRENUMERERA" background on press -----*/
-.subscribe-button:active {
+.m-subscribe-button:active, .d-subscribe-button:active {
     background-color: #e0e0e0;
 }
 
 /*----- Dropdown menus centered and with margin -----*/
-.footer-links {
+.m-footer-links {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -141,7 +135,7 @@ details {
 summary {
     cursor: pointer;
     font-weight: 400;
-    font-size: 1.25rem;
+    font-size: var(--font-size-medium);
     list-style: none;
     display: flex;
     justify-content: center;
@@ -153,7 +147,7 @@ details > summary::after {
     content: "\f107";
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
-    font-size: 1rem;
+    font-size: var(--font-size-xsmall);
     margin-left: 0.7rem;
     transition: transform 0.3s ease, content 0.3s ease;
 }
@@ -163,18 +157,18 @@ details[open] > summary::after{
 }
 
 /*----- Contact info style -----*/
-.contact-content {
+.m-contact-content {
     text-decoration: none !important;
     margin-bottom: 3rem !important;
 }
     
-.dropdown-content {
+.m-dropdown-content {
     padding: 0.7rem;
 }
 
 /*----- Dropdown content style -----*/
-.dropdown-content p {
-    font-size: 1.125rem;
+.m-dropdown-content a {
+    font-size: var(--font-size-small);
     text-decoration: underline;
     color: #333;
     padding: 0.3rem 0;
@@ -182,39 +176,152 @@ details[open] > summary::after{
 }
 
 /*----- Dropdown content style on hover, unnecessary but saved for possible changes -----*/
-.dropdown-content p:hover {
+.m-dropdown-content p:hover {
     background-color: #fff;
 }
 
 /*----- Social icons style -----*/
-.footer-social-icons {
+.m-footer-social-icons {
     max-width: 2rem;
 }
     
-.social-icons {
+.m-social-icons {
     margin: 2rem 0;
-    font-size: 1.5rem;
+    font-size: var(--font-size-large);
     display: flex;
     gap: 1.5rem;
 }
     
-.social-icon {
-    font-size: 1.5rem;
+.m-social-icon {
+    font-size: var(--font-size-large);
     transition: color 0.3s ease;
 }
     
-.social-icon:hover {
-    stroke: #88f071;
+.m-social-icon:hover {
+    stroke: var(--color-green);
 }
 
-/*----- Payment icons style -----*/
-.payment-icons {
+/*----- Payment icons style (and swedish flag in desktop footer) -----*/
+.m-payment-icons, .d-payment-icons {
     display: flex;
+    justify-content: space-around;
     gap: 2.5rem;
     margin-top: 0.6px;
 }
     
-.payment-icons img {
+.m-payment-icons img, .d-payment-icons img, .d-flag {
     max-width: 3rem;
     max-height: 1.5rem;
+    margin-right: 0.6rem;
+}
+
+.d-payment-text {
+    align-self: center;
+}
+
+/*----------------------------------------------------------------------------------------------------*/
+
+.d-footer {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(20rem, 1fr));
+    grid-template-rows: 0.75fr 0.2fr 2fr 2fr 0.2fr 3fr 0.2fr 1fr 0.2fr auto;
+    padding: 1rem;
+    background-color: #ffffff;
+    color: #333;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.d-grid-item {
+    background-color: #fff;
+    padding: 0.3px;
+    margin: 0 2rem 2rem 2rem;
+    align-items: center;
+}
+
+.d-grid-info h4 {
+    font-size: var(--font-size-medium);
+    grid-column: 1 / span 2;
+}
+
+.d-grid-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr 1fr 1fr;
+}
+
+.d-my-page {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr 1fr 1fr;
+}
+
+.d-my-page p {
+    grid-column: 1 / span 2;
+}
+
+.d-welcome-text {
+    align-self: center;
+}
+
+.d-line {
+    border-top: 0.1rem solid #cbcbcb;
+    grid-column: 1 / span 2;
+}
+
+.d-footer-top-logo {
+    grid-column: 1 / span 2;
+    max-height: 2rem;
+    align-self: center;
+    justify-self: center;
+}
+
+.d-footer-logo {
+    max-height: 2rem;
+}
+
+.d-language {
+    display: flex;
+    align-items: flex-start;
+}
+
+.d-country {
+    font-size: var(--font-size-medium);
+    font-weight: 700;
+}
+
+/*--------------------------------------------------*/
+
+/*----- Hide mobile footer when over 700px -----*/
+@media (min-width: 700px) {
+    .m-footer {
+        display: none;
+    }
+}
+
+/*----- Hide desktop footer when under 700px -----*/
+@media (max-width: 700px) {
+    .d-footer {
+        display: none;
+    }
+    .m-newsletter-container, .m-subscribe-button, ::placeholder {
+        background-color: var(--color-green);
+        color: var(--color-white);
+        border: 0.1rem solid var(--color-white);
+    }
+    .m-newsletter-container input[type="email"] {
+        border-bottom: 0.1rem solid var(--color-white);
+    }
+    .m-checkbox-container a {
+        color: var(--color-white);
+    }
+    .m-newsletter-container h6, .d-newsletter-container h6 {
+        font-size: var(--font-size-medium);
+        font-weight: normal;
+    }
+}
+
+@media (min-width: 1000px) {
+    .footer {
+        margin: 5rem;
+    }
 }

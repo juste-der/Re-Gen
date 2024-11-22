@@ -2,99 +2,297 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <meta name="description" content="Add description" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/CSS/base/globals.css">
-    <link rel="stylesheet" href="/CSS/layout/footer.css">
-    <link rel="stylesheet" href="/CSS/config/variables.css">
+    <link rel="stylesheet" href="/CSS/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=IBM+Plex+Sans+JP&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=IBM+Plex+Sans+JP&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/CSS/base/globals.css" />
+    <link rel="stylesheet" href="/CSS/layout/footer.css" />
+    <link rel="stylesheet" href="/CSS/config/variables.css" />
     <title>ReGen Officiella Webbplats</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="favicon" href="/icons/favicon.ico">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
   </head>
   <body>
     <div class="header">
-      <div class="nav-menu"></div>
-      <a href="/">
-        <img src="/images/ReGen-logo.png" alt="Website logo" class="logo" />
-      </a>
-    </div>
-  <body>
-  <footer class="footer">
-    <div class="newsletter-container">
-      <h6>Prenumerera på vårat nyhetsbrev och få<br></h6>
-        <h5>15% rabatt på ditt nästa köp!</h5>
-      <label for="email">Din emailadress</label>
-      <input type="email" id="email">
-  
-      <div class="checkbox-container">
-          <input type="checkbox" id="accept-policy">
-          <label for="accept-policy">Jag accepterar <a href="#">integritetspolicyn</a></label>
+      <div class="hamburger-btn">
+        <img src="/icons/hamburger.svg" alt="Side Menu" onclick="openNav()" />
+        <p>MENY</p>
       </div>
+      <div id="sidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <div class="menu-items">
+          <input
+            class="searchInput"
+            id="search-field"
+            type="search"
+            placeholder="Vad letar du efter?"
+          />
+          <ul>
+            <li>
+              <a href="#"> Nyheter</a
+              ><img src="/icons/arrow.svg" alt="News icon" />
+            </li>
+            <li>
+              <a href="#">Inspiration</a
+              ><img src="/icons/arrow.svg" alt="Inspiration icon" />
+            </li>
+            <li>
+              <a href="#"> Möbler</a
+              ><img src="/icons/arrow.svg" alt="Furniture icon" />
+            </li>
+            <li>
+              <a href="#"> Inredning</a
+              ><img src="/icons/arrow.svg" alt="Decor icon" />
+            </li>
+            <li>
+              <img src="/icons/green-heart.svg" alt="" />
+              <a href="#"> Favoriter</a>
+              <img src="/icons/arrow.svg" alt="" />
+            </li>
+          </ul>
+          <ul>
+            <img
+              src="/icons/line.svg"
+              alt="Divider line"
+              class="menu-divider"
+            />
+            <li>
+              <a href="#"> Mina Sidor</a
+              ><img src="/icons/arrow.svg" alt="My Pages icon" />
+            </li>
+            <li>
+              <a href="#">Kundservice</a
+              ><img src="/icons/arrow.svg" alt="Customer Service icon" />
+            </li>
+            <li>
+              <a href="#">Ändra Språk</a
+              ><img src="/icons/arrow.svg" alt="Change Language icon" />
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="left-side">
+        <input
+          class="searchInput"
+          id="search-field"
+          type="search"
+          placeholder="Vad letar du efter?"
+        />
+        <ul>
+          <li><a href="#">NYHETER</a></li>
+          <li><a href="#">MÖBLER</a></li>
+          <li><a href="#">INREDNING</a></li>
+          <li><a href="#">REA</a></li>
+        </ul>
+      </div>
+      <div class="logo-homepage">
+        <a href="/">
+          <img src="/images/ReGen-logo.png" alt="Website logo" />
+        </a>
+      </div>
+      <div class="right-side">
+        <div class="shopping-cart">
+          <a href="#">
+            <img src="/icons/cart.svg" alt="Shopping cart" />
+            <p>FÖRBOKA</p>
+          </a>
+        </div>
+        <div class="favorites">
+          <a href="#"
+            ><img src="/icons/heart.svg" alt="" />
+            <p>FAVORITER</p></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <footer class="m-footer">
+      <div class="m-newsletter-container">
+        <h6>Återställ skogar med din förbokning<br></h6>
+          <p>Förbeställ idag – varje order bidrar till återplantering och skydd av biologisk mångfald. 
+            Tillsammans gör vi skillnad för framtiden.</p>
+        <label for="m-email">Din emailadress</label>
+        <input type="email" id="m-email" placeholder="example@example.com">
+    
+        <div class="m-checkbox-container">
+            <input type="checkbox" id="mc-accept-policy">
+            <label for="mc-accept-policy">Jag accepterar <a href="#">integritetspolicyn</a></label>
+        </div>
+    
+        <button class="m-subscribe-button">REGISTRERA DIG</button>
+    </div>
+      <div class="m-footer-links">
+        <details>
+          <summary>Kundservice</summary>
+          <div class="m-dropdown-content">
+            <details>
+              <summary>Kontakta oss</summary>
+              <div class="m-dropdown-content">
+              <p class="m-contact-content">Varmt välkommen att upptäcka vårt sortiment online, eller hör av dig om du har frågor – vi finns här för dig.<br><br>
+                Tel: +46 70-001 10 10<br>
+                Måndag - Fredag 08:00-16:00<br>
+                (Under storhelg kan öppetiderna variera.)<br>
+                Epost: info@ReGen.se</p>
+              </div>
+            </details>
+            <a href="#">Förbokning</a><br>
+            <a href="#">Vanliga frågor & svar</a><br>
+            <a href="#">Köpvillkor</a><br>
+            <a href="#">Integritetspolicy</a><br>
+            <a href="#">Cookies</a>
+          </div>
+        </details>
+        <details>
+          <summary>Företagsinformation</summary>
+          <div class="m-dropdown-content">
+            <a href="#">Om ReGen</a><br>
+            <a href="#">Karriär</a><br>
+            <a href="#">Hållbarhet</a><br>
+            <a href="#">Affiliates</a>
+          </div>
+        </details>
+        <details>
+          <summary>Kollektioner</summary>
+          <div class="m-dropdown-content">
+            <a href="#">"Kollektion 1"</a><br>
+            <a href="#">"Kollektion 2"</a><br>
+            <a href="#">"Kollektion 3"</a>
+          </div>
+        </details>
+      </div>
+      <div class="m-social-icons">
+        <a href="https://www.facebook.com/" target="_blank" class="m-social-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.75rem" height="1.75rem" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" class="m-social-icon"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" class="m-social-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.75rem" height="1.75rem" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" class="m-social-icon"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+        </a>
+        <a href="https://www.twitter.com/" target="_blank" class="m-social-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.75rem" height="1.75rem" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" class="m-social-icon"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+        </a>
+      </div>
+      <div class="m-payment-icons">
+        <img class="footer-payment-visa" src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Visa_2014.svg">
+        <img class="footer-payment-mastercard" src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg">
+        <img class="footer-payment-paypal" src="https://upload.wikimedia.org/wikipedia/commons/3/39/PayPal_logo.svg">
+      </div>
+    </footer>
+    
+    <section class="upper-index">
+
+    </section>
+
+    <section class="lower-index">
+      
+    </section>
   
-      <button class="subscribe-button">PRENUMERERA</button>
-  </div>
-    <div class="footer-links">
-      <details>
-        <summary>Kundservice</summary>
-        <div class="dropdown-content">
-          <details>
-            <summary>Kontakta oss</summary>
-            <div class="dropdown-content">
-            <p class="contact-content">Varmt välkommen att upptäcka vårt sortiment online, eller hör av dig om du har frågor – vi finns här för dig.<br><br>
-              Tel: +46 70-001 10 10<br>
-              Måndag - Fredag 08:00-16:00<br>
-              (Under storhelg kan öppetiderna variera.)<br>
-              Epost: info@ReGen.se</p>
+  
+    <footer class="d-footer">
+      <img src="/images/ReGen-logo.png" alt="Website logo" class="d-footer-top-logo">
+      <span class="d-line"></span>
+      <section class="d-grid-item d-grid-info d-my-page">
+        <h4>MINA SIDOR</h4>
+        <p>Mina förbokningar</p>
+        <p>Min profil</p>
+        <p>Mina favoriter</p>
+      </section>
+      <section class="d-grid-item d-grid-info d-services">
+        <h4>VÅRA TJÄNSTER</h4>
+        <p>Designa din egna</p>
+        <p>Våra färger</p>
+      </section>
+      <section class="d-grid-item d-grid-info d-info">
+        <h4>INFORMATION</h4>
+        <p>Om ReGen</p>
+        <p>Hållbarhet</p>
+        <p>Jobba hos oss</p>
+        <p>Våra material</p>
+      </section>
+      <section class="d-grid-item d-grid-info d-policies">
+        <h4>VILLKOR</h4>
+        <p>Allmäna villkor</p>
+        <p>Affiliates</p>
+        <p>Cookies</p>
+        <p>Personuppgiftspolicy</p>
+      </section>
+      <span class="d-line"></span>
+      <section class="d-grid-item d-register">
+        <div class="d-newsletter-container">
+          <h6>Återställ skogar med din förbokning<br></h6>
+          <p>Förbeställ idag – varje order bidrar till återplantering och skydd av biologisk mångfald. 
+            Tillsammans gör vi skillnad för framtiden.</p>
+          <label for="d-email">Din emailadress</label>
+          <input type="email" id="d-email" placeholder="example@example.com">
+          <button class="d-subscribe-button">REGISTRERA DIG</button>
+          <div class="d-checkbox-container">
+              <input type="checkbox" id="dc-accept-policy">
+              <label for="dc-accept-policy">Jag accepterar <a href="#">integritetspolicyn</a></label>
+          </div>
+      </section>
+      <section class="d-grid-item d-welcome-text">
+        <p>Varmt välkommen att upptäcka vårt sortiment online, eller hör av dig om du har frågor – vi finns här för dig.<br><br>
+  
+          Tel: +46 70-001 10 10<br>
+          Måndag - Fredag 08:00-16:00<br>
+          (Under storhelg kan öppetiderna variera.)<br><br>
+          
+          Epost: info@ReGren.se
+          </p>
+      </section>
+      <span class="d-line"></span>
+      <section class="d-grid-item d-payment-text">
+        <h3>Säkra betalningar</h3>
+        <p>Vill du veta mer om våra betalalternativ?</p>
+      </section>
+      <section class="d-grid-item d-payment-icons">
+        <img class="footer-payment-visa" src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Visa_2014.svg">
+        <img class="footer-payment-mastercard" src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg">
+        <img class="footer-payment-paypal" src="https://upload.wikimedia.org/wikipedia/commons/3/39/PayPal_logo.svg">
+      </section>
+      <span class="d-line"></span>
+      <section class="d-grid-item d-logo">
+        <img src="/images/ReGen-logo.png" alt="Website logo" class="d-footer-logo">
+      </section>
+      <section class="d-grid-item d-language">
+        <details>
+          <summary>
+            <img class="d-flag" src="https://www.svgrepo.com/show/401767/flag-for-sweden.svg">
+            Sverige
+            </summary>
+            <div class="d-dropdown-content">
+            <img class="d-flag" src="https://www.svgrepo.com/show/401788/flag-for-united-kingdom.svg">
+            UK English
             </div>
-          </details>
-          <p>Beställning</p>
-          <p>Betalning</p>
-          <p>Leverans</p>
-          <p>Retur</p>
-          <p>Vanliga frågor & svar</p>
-          <p>Köpvillkor</p>
-          <p>Hitta butik</p>
-          <p>Integritetspolicy</p>
-          <p>Cookies</p>
-        </div>
-      </details>
-      <details>
-        <summary>Företagsinformation</summary>
-        <div class="dropdown-content">
-          <p>Om ReGen</p>
-          <p>Karriär</p>
-          <p>Hållbarhet</p>
-          <p>Affiliates</p>
-        </div>
-      </details>
-      <details>
-        <summary>Kollektioner</summary>
-        <div class="dropdown-content">
-          <p>"Kollektion 1"</p>
-          <p>"Kollektion 2"</p>
-          <p>"Kollektion 3"</p>
-        </div>
-      </details>
-    </div>
-    <div class="social-icons">
-      <a href="https://www.facebook.com/" target="_blank" class="social-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="1.75rem" height="1.75rem" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" class="social-icon"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-      </a>
-      <a href="https://www.instagram.com/" target="_blank" class="social-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="1.75rem" height="1.75rem" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" class="social-icon"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-      </a>
-      <a href="https://www.twitter.com/" target="_blank" class="social-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="1.75rem" height="1.75rem" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" class="social-icon"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
-      </a>
-    </div>
-    <div class="payment-icons">
-      <img class="footer-payment-visa" src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Visa_2014.svg">
-      <img class="footer-payment-mastercard" src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg">
-      <img class="footer-payment-paypal" src="https://upload.wikimedia.org/wikipedia/commons/3/39/PayPal_logo.svg">
-    </div>
-  </footer>
-</body>
+        </details>
+      </section>
+    </footer>
+    <script src="/javascript/script.js"></script>
+  </body>
 </html>

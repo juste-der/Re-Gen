@@ -1,8 +1,23 @@
+@import url("/CSS/base/reset.css");
 @import url("/CSS/layout/header.css");
+@import url("/CSS/base/globals.css");
+@import url("/CSS/layout/footer.css");
+@import url("/CSS/config/variables.css");
+@import url("/CSS/base/typography.css");
 
 /*----- Upper index styles -----*/
+.hero-quote {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 389px;
+  height: 141px;
+  gap: 10px;
+}
 
-
+.hero-banner img {
+  transform: translate(-30%);
+}
 
 /*----------------------------------------------------------------------------------------------------*/
 
@@ -43,265 +58,289 @@
 /*----- Section "Sustainability" -----*/
 
 .sustainability {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 /*----- Section "Quote" -----*/
 
 .quote {
-    font-family: "IBM Plex Sans JP";
-    margin: 1rem;
-    text-align: center;
+  font-family: "IBM Plex Sans JP";
+  margin: 1rem;
+  text-align: center;
 }
 
 /*----- Section "Collection" -----*/
 
 .collection {
-    display: flex;
-    flex-wrap: wrap;
-    row-gap: 0.6rem;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 0.6rem;
 }
 
 h3 {
-    margin: 1rem;
-    font-size: var(--font-size-large);
-    font-weight: normal;
-    text-align: center;
+  margin: 1rem;
+  font-size: var(--font-size-large);
+  font-weight: normal;
+  text-align: center;
 }
 
 .item {
-    position: relative;
-    width: 50%;
+  position: relative;
+  width: 50%;
 }
 
 .item img {
-    width: 100%;
+  width: 100%;
 }
 
 .colors {
-    display: flex;
+  display: flex;
 }
 
 .color-birch {
-    background-color: var(--color-birch);
-    border-radius: 50%;
-    border: 0.1rem solid #fff;
-    width: 1.5rem;
-    height: 1.5rem;
-    position: absolute;
-    top: 0.6rem;
-    left: 0.6rem;
+  background-color: var(--color-birch);
+  border-radius: 50%;
+  border: 0.1rem solid #fff;
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
 }
 
 .color-rainbow {
-    background-image: linear-gradient(to right, red, orange, yellow, green, blue);
-    border-radius: 50%;
-    border: 0.1rem solid #fff;
-    width: 1.5rem;
-    height: 1.5rem;
-    position: absolute;
-    top: 0.6rem;
-    left: 2.5rem;
+  background-image: linear-gradient(to right, red, orange, yellow, green, blue);
+  border-radius: 50%;
+  border: 0.1rem solid #fff;
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  top: 0.6rem;
+  left: 2.5rem;
 }
 
 .item a {
-    color: #fff;
-    text-decoration: none;
-    position: absolute;
-    bottom: 0.6rem;
-    left: 0.6rem;
+  color: #fff;
+  text-decoration: none;
+  position: absolute;
+  bottom: 0.6rem;
+  left: 0.6rem;
 }
 
 .item i {
-    color: #fff;
-    position: absolute;
-    top: 0.6rem;
-    right: 0.6rem;
+  color: #fff;
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
 }
 
 .collection-button {
-    background-color: transparent;
-    width: 100%;
-    padding: 0.6rem;
-    margin: 0.8rem;
-    color: #000;
-    font-size: var(--font-size-xsmall);
-    border: 0.1rem solid #000;
-    transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: transparent;
+  width: 100%;
+  padding: 0.6rem;
+  margin: 0.8rem;
+  color: #000;
+  font-size: var(--font-size-xsmall);
+  border: 0.1rem solid #000;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /*----- Section "Paint", "Carpet", "History" -----*/
-.paint, .chair, .wood, .commitment /*, .history*/{
-    font-family: "IBM Plex Sans JP";
-    position: relative;
-    margin-top: 1rem;
-    overflow: hidden;
+.paint, .chair, .wood, .commitment, .hero-banner /*, .history*/ {
+  font-family: "IBM Plex Sans JP";
+  position: relative;
+  margin-top: 1rem;
+  overflow: hidden;
 }
 
-.paint img, .carpet img, .chair img, .wood img, .commitment img /*, .history img*/ {
-    width: 200%;
-    height: auto;
-    object-fit: cover;
+.paint img, .carpet img, .chair img, .wood img, .commitment img, .hero-banner img/*, .history img*/ {
+  width: 200%;
+  height: auto;
+  object-fit: cover;
 }
 
-.paint h2, .carpet-title, .chair h2, .commitment h2, .wood h2 {
-    color: #fff;
-    position: absolute;
-    bottom: 5rem;
-    left: 1rem;
+.paint h2,
+.carpet-title,
+.chair h2,
+.commitment h2,
+.wood h2,
+.hero-banner h2 {
+  color: #fff;
+  position: absolute;
+  bottom: 5rem;
+  left: 1rem;
 }
 
 /*----- Section "Carpet" -----*/
 
 .carpet {
-    font-family: "IBM Plex Sans JP";
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    margin-top: 1rem;
-    overflow: hidden;
+  font-family: "IBM Plex Sans JP";
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 1rem;
+  overflow: hidden;
 }
 
 .carpet-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: var(--color-green);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--color-green);
 }
 
-.carpet-description, .carpet p {
-    justify-self: center;
-    margin: 2rem 3rem;
+.carpet-description,
+.carpet p {
+  justify-self: center;
+  margin: 2rem 3rem;
 }
 
 /*----- Buttons (default mobile view -----*/
 
-.paint button, .m-carpet-button, .chair button, .commitment button, .wood button {
-    position: absolute;
-    bottom: 2rem;
-    left: 1rem;
-    background-color: transparent;
-    width: 90%;
-    padding: 0.6rem;
-    margin-top: 0.8rem;
-    color: #fff;
-    font-size: var(--font-size-xsmall);
-    border: 0.1rem solid var(--color-white);
-    transition: background-color 0.3s ease, color 0.3s ease;
-    }
+.paint button,
+.m-carpet-button,
+.chair button,
+.commitment button,
+.wood button,
+.hero-banner button {
+  position: absolute;
+  bottom: 2rem;
+  left: 1rem;
+  background-color: transparent;
+  width: 90%;
+  padding: 0.6rem;
+  margin-top: 0.8rem;
+  color: #fff;
+  font-size: var(--font-size-xsmall);
+  border: 0.1rem solid var(--color-white);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
 .d-carpet-button {
-    background-color: transparent;
-    width: 90%;
-    padding: 0.6rem;
-    margin-top: 0.8rem;
-    color: #000;
-    font-size: var(--font-size-xsmall);
-    border: 0.1rem solid #000;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    }
+  background-color: transparent;
+  width: 90%;
+  padding: 0.6rem;
+  margin-top: 0.8rem;
+  color: #000;
+  font-size: var(--font-size-xsmall);
+  border: 0.1rem solid #000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
 /*----- Changes for desktop -----*/
 
 @media (min-width: 700px) {
-    .sustainability {
-        flex-direction: row;
-        gap: 1rem;
-    }
-    .commitment h2, .wood h2 {
-        bottom: 10rem;
-    }
-    .commitment button, .wood button {
-        width: 25%;
-        bottom: 7rem;
-    }
-    /*----- Collection -----*/
-    .collection {
-        margin: 1rem 5rem;
-        max-width: 100%;
-        gap: 0.6rem;
-        flex-wrap: wrap;
-        justify-self: center;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .item {
-        width: 49%;
-    }
-    .color-birch {
-        width: 2rem;
-        height: 2rem;
-    }
-    .color-rainbow {
-        width: 2rem;
-        height: 2rem;
-        left: 3rem;
-    }
-    .item a {
-        font-size: var(--font-size-large);
-        bottom: 1rem;
-        left: 1rem
-    }
-    .item i {
-        top: 1rem;
-        right: 1rem;
-    }
-    .collection-button {
-        margin: 0;
-        width: 100%;
-    }
-    /*----- Carpet -----*/
-    .carpet {
-        flex-direction: row-reverse;
-    }
-    .carpet-info {
-        display: flex;
-        width: 100%;
-        background-color: #fff;
-    }
-    .carpet img {
-        width: 100%;
-        height: 50rem;
-    }
-    .m-carpet-button {
-        display: none;
-    }
-    .d-carpet-button {
-        font-size: var(--font-size-medium);
-        width: 85%;
-        bottom: 5rem;
-        left: 2rem;
-        margin: 2rem 3rem;
-    }
-    .carpet-description {
-        font-size: var(--font-size-xxlarge);
-    }
-    .carpet p {
-        font-size: var(--font-size-large);
-    }
-    /*----- Paint -----*/
-    .paint img, .chair img, .sustainability img {
-        width: 100%;
-        max-height: 50rem;
-        object-fit: cover;
-    }
-    .paint h2, .carpet-title, .chair h2 {
-        font-size: var(--font-size-xxlarge);
-        bottom: 10rem;
-        left: 2rem;
-        width: 50%;
-    }
-    .paint button, .chair button {
-        font-size: var(--font-size-medium);
-        width: 50%;
-        bottom: 5rem;
-        left: 2rem;
-    }
+  .hero-banner img {
+    transform: translate(0);
+  }
+  .sustainability {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .commitment h2,
+  .wood h2 {
+    bottom: 10rem;
+  }
+  .commitment button,
+  .wood button {
+    width: 25%;
+    bottom: 7rem;
+  }
+  /*----- Collection -----*/
+  .collection {
+    margin: 1rem 5rem;
+    max-width: 100%;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    justify-self: center;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .item {
+    width: 49%;
+  }
+  .color-birch {
+    width: 2rem;
+    height: 2rem;
+  }
+  .color-rainbow {
+    width: 2rem;
+    height: 2rem;
+    left: 3rem;
+  }
+  .item a {
+    font-size: var(--font-size-large);
+    bottom: 1rem;
+    left: 1rem;
+  }
+  .item i {
+    top: 1rem;
+    right: 1rem;
+  }
+  .collection-button {
+    margin: 0;
+    width: 100%;
+  }
+  /*----- Carpet -----*/
+  .carpet {
+    flex-direction: row-reverse;
+  }
+  .carpet-info {
+    display: flex;
+    width: 100%;
+    background-color: #fff;
+  }
+  .carpet img {
+    width: 100%;
+    height: 50rem;
+  }
+  .m-carpet-button {
+    display: none;
+  }
+  .d-carpet-button {
+    font-size: var(--font-size-medium);
+    width: 85%;
+    bottom: 5rem;
+    left: 2rem;
+    margin: 2rem 3rem;
+  }
+  .carpet-description {
+    font-size: var(--font-size-xxlarge);
+  }
+  .carpet p {
+    font-size: var(--font-size-large);
+  }
+  /*----- Paint -----*/
+  .paint img,
+  .chair img,
+  .sustainability img,
+  .hero-banner img {
+    width: 100%;
+    max-height: 50rem;
+    object-fit: cover;
+  }
+  .paint h2,
+  .carpet-title,
+  .chair h2,
+  .hero-banner h2 {
+    font-size: var(--font-size-xxlarge);
+    bottom: 10rem;
+    left: 2rem;
+    width: 50%;
+  }
+  .paint button,
+  .chair button,
+  .hero-banner button {
+    font-size: var(--font-size-medium);
+    width: 50%;
+    bottom: 5rem;
+    left: 2rem;
+  }
 }
 
 @media (max-width: 700px) {
-    .d-carpet-button {
-        display: none;
-    }
+  .d-carpet-button {
+    display: none;
+  }
 }

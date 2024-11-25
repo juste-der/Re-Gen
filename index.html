@@ -6,7 +6,6 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
-    <meta name="description" content="Add description" />
     <link rel="stylesheet" href="/CSS/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,15 +26,13 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/CSS/base/globals.css" />
-    <link rel="stylesheet" href="/CSS/layout/footer.css" />
-    <link rel="stylesheet" href="/CSS/config/variables.css" />
-    <title>ReGen Officiella Webbplats</title>
-    <link rel="icon" type="favicon" href="/icons/favicon.ico">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+    <title>ReGen Officiella Webbplats</title>
+    <link rel="icon" type="favicon" href="/icons/favicon.ico">
+    
   </head>
   <body>
     <div class="header">
@@ -50,7 +47,6 @@
         <div class="menu-items">
           <input
             class="searchInput"
-            id="search-field"
             type="search"
             placeholder="Vad letar du efter?"
           />
@@ -101,20 +97,20 @@
       <div class="left-side">
         <input
           class="searchInput"
-          id="search-field"
           type="search"
           placeholder="Vad letar du efter?"
         />
-        <ul>
-          <li><a href="#">NYHETER</a></li>
-          <li><a href="#">MÖBLER</a></li>
-          <li><a href="#">INREDNING</a></li>
-          <li><a href="#">REA</a></li>
-        </ul>
+        <div class="link-container">
+          <a href="#" class="link">NYHETER</a>
+          <a href="#" class="link">MÖBLER</a>
+          <a href="#" class="link">INREDNING</a>
+          <a href="#" class="link">REA</a>
+        </div>
+        
       </div>
       <div class="logo-homepage">
         <a href="/">
-          <img src="/images/ReGen-logo.png" alt="Website logo" />
+          <img src="/icons/logo.svg" alt="Website logo" />
         </a>
       </div>
       <div class="right-side">
@@ -132,6 +128,13 @@
         </div>
       </div>
     </div>
+    <div class="hero-banner">
+      <img src="/images/collection-bjärkfamiljen.png" alt="Björkfamiljen collection">
+      <h2>BJÖRK FAMILJEN</h2>
+      <button class="hero-banner-button">VISA KOLLEKTION <i class="fa-solid fa-angle-right"></i></button>
+    </div>
+    <div class="hero-quote">Vi skapar produkter inte bara för personen, men också för planeten. 
+      Med hög kvalitativa material och miljötänkande produktionsprocesser.</div>
     <div class="sustainability">
       <div class="commitment">
         <img src="https://images.unsplash.com/photo-1493599124325-e628361046af?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Trees looking up">

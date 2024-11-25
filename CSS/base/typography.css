@@ -1,1 +1,5 @@
-/* Basic Typography styles
+/* Basic Typography styles*/
+
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+}

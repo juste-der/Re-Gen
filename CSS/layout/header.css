@@ -1,13 +1,8 @@
-* {
-  list-style: none;
-  margin: 0;
-}
-
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.3rem 1.5rem;
+  padding: 1rem 1.5rem;
 }
 
 .hamburger-btn {
@@ -17,8 +12,9 @@
 }
 
 .sidenav {
-  font-family: Inter;
   display: flex;
+  color: var(--sidenav-color);
+  font-family: var(--mobile-buttons-font-family);
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
@@ -69,7 +65,7 @@
 .sidenav ul {
   display: flex;
   flex-direction: column;
-  padding: 0px;
+  padding: 0 1rem;
   gap: 1.5rem;
 }
 
@@ -97,20 +93,16 @@
   display: none; /*none*/
   flex-direction: column;
 }
-.left-side ul {
+
+.link-container {
   display: flex;
+  gap: 1rem;
   justify-content: center;
   align-items: center;
-  padding: 0;
 }
-.left-side li {
-  display: flex;
-  padding: 0 10px 0 0;
-  width: 6rem;
-  height: 3rem;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
+.link {
+  display: inline-block;
+  padding: 10px 10px 0 0;
 }
 .left-side a,
 .hamburger-btn p,
@@ -123,6 +115,7 @@
   line-height: normal;
   text-decoration: none;
   color: #000;
+  cursor: pointer;
 }
 
 .logo-homepage {
@@ -132,8 +125,9 @@
   transform: translateX(-50%);
   align-items: center;
   justify-content: center;
-  width: 6rem;
-  height: 1.5rem;
+  width: 9rem;
+  height: 3rem;
+  margin-top: 0.7rem;
   padding: 0.5rem;
   flex-shrink: 0;
 }

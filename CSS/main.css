@@ -4,7 +4,8 @@
 @import url("/CSS/layout/footer.css");
 @import url("/CSS/config/variables.css");
 @import url("/CSS/base/typography.css");
-@import url("/CSS/hero.css");
+@import url("/CSS/pages/hero.css");
+@import url("/CSS/pages/news-ticker.css");
 
 .sustainability {
   display: flex;

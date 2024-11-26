@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 1.5rem;
+  padding: 1.5rem 0.8rem 1rem;
 }
 
 .hamburger-btn {
@@ -19,7 +19,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   position: fixed;
-  z-index: 1;
+  z-index: 999;
   top: 0;
   left: 0;
   width: 0;
@@ -121,13 +121,13 @@
 .logo-homepage {
   display: flex;
   position: absolute;
-  left: 50%;
+  left: 48%;
   transform: translateX(-50%);
   align-items: center;
   justify-content: center;
-  width: 9rem;
-  height: 3rem;
-  margin-top: 0.7rem;
+  width: 8rem;
+  height: 2.5rem;
+  margin-top: 0.5rem;
   padding: 0.5rem;
   flex-shrink: 0;
 }
@@ -150,7 +150,7 @@
 .favorites a {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.2rem;
 }
 
 .shopping-cart img,
@@ -187,6 +187,7 @@
   .logo-homepage {
     width: 9rem;
     height: 3rem;
+    left: 50%;
   }
   .right-side {
     top: 96px;

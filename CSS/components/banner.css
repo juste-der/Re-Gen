@@ -1,0 +1,26 @@
+.text-banner {
+    width: 100%;
+    height: 3rem;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--color-blue);
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.scrolling-text {
+    white-space: nowrap;
+    display: inline-block;
+    position: absolute;
+    animation: scroll-text 20s linear infinite;
+}
+
+@keyframes scroll-text {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}

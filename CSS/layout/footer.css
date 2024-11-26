@@ -295,7 +295,14 @@ details[open] > summary::after {
 .d-language {
   display: flex;
   align-items: flex-start;
+  margin-left: auto;
 }
+
+.d-language .d-dropdown-content {
+  display: flex;
+  align-items: center;
+}
+
 
 .d-country {
   font-size: var(--font-size-medium);

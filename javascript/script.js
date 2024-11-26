@@ -16,6 +16,8 @@ function closeNav() {
   sidenav.style.height = "0";
 }
 
+/*----- Product slides -----*/
+
 document.addEventListener("DOMContentLoaded", () => {
   const carousels = document.querySelectorAll(".carousel");
   const slideIndices = {};
@@ -26,38 +28,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const indicators = carousel.querySelectorAll(".spanCircle");
 
-    // Show the first slide for each carousel
     showSlide(carouselName, 0);
 
-    // Add click event listeners to the left and right arrows
     const arrows = carousel.querySelectorAll(".arrow");
     arrows.forEach((arrow) => {
       arrow.addEventListener("click", (event) => {
-        const direction = arrow.classList.contains("left") ? -1 : 1; // Explicitly check arrow direction
+        const direction = arrow.classList.contains("left") ? -1 : 1;
         changeSlide(carouselName, direction);
-        event.stopPropagation(); // Prevent half-image click events from triggering
+        event.stopPropagation();
       });
     });
 
-    // Add click event listeners to indicators
     indicators.forEach((indicator, index) => {
       indicator.addEventListener("click", (e) => {
-        e.stopPropagation(); // Prevent half-image click events from firing
+        e.stopPropagation();
         showSlide(carouselName, index);
         slideIndices[carouselName] = index;
       });
     });
 
-    // Add click event listeners to the left and right halves of the image
     carousel.addEventListener("click", (e) => {
       const rect = carousel.getBoundingClientRect();
       const clickX = e.clientX - rect.left;
 
       if (clickX < rect.width / 2) {
-        // Left half
         changeSlide(carouselName, -1);
       } else {
-        // Right half
         changeSlide(carouselName, 1);
       }
     });
@@ -90,135 +86,38 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-/*
+/*----- Reset subsribe form when clicking "Register" -----*/
+
 document.addEventListener("DOMContentLoaded", () => {
-  // Initialize slide indices for all carousels
-  const carousels = document.querySelectorAll(".carousel");
-  const slideIndices = {};
+  const handleNewsletterReset = (formId, emailInputId, checkboxId, buttonClass) => {
+      const emailInput = document.getElementById(emailInputId);
+      const acceptPolicyCheckbox = document.getElementById(checkboxId);
+      const subscribeButton = document.querySelector(buttonClass);
 
-  carousels.forEach((carousel) => {
-    const carouselName = carousel.getAttribute("data-carousel");
-    slideIndices[carouselName] = 0;
-
-    // Show the first slide for each carousel
-    showSlide(carouselName, 0);
-
-    // Add click event listeners to the left and right arrows
-    const arrows = carousel.querySelectorAll(".arrow");
-    arrows.forEach((arrow) => {
-      arrow.addEventListener("click", () => {
-        const direction = parseInt(arrow.getAttribute("data-direction"));
-        changeSlide(carouselName, direction);
-      });
-    });
-
-    // Add click event listeners to the left and right halves
-    carousel.addEventListener("click", (e) => {
-      const rect = carousel.getBoundingClientRect();
-      const clickX = e.clientX - rect.left;
-
-      if (clickX < rect.width / 2) {
-        // Left half
-        changeSlide(carouselName, -1);
-      } else {
-        // Right half
-        changeSlide(carouselName, 1);
+      if (emailInput && acceptPolicyCheckbox && subscribeButton) {
+          subscribeButton.addEventListener("click", () => {
+              if (acceptPolicyCheckbox.checked && emailInput.value !== "") {
+                  emailInput.value = "";
+                  acceptPolicyCheckbox.checked = false;
+              } else {
+                  alert("Please fill in your email and accept the policy before subscribing.");
+              }
+          });
       }
-    });
-  });
+  };
 
-  function changeSlide(carouselName, direction) {
-    const slides = document.querySelectorAll(`.mySlides.${carouselName}`);
-    slideIndices[carouselName] =
-      (slideIndices[carouselName] + direction + slides.length) % slides.length;
-
-    showSlide(carouselName, slideIndices[carouselName]);
-  }
-
-  function showSlide(carouselName, index) {
-    const slides = document.querySelectorAll(`.mySlides.${carouselName}`);
-    slides.forEach((slide, i) => {
-      slide.style.display = i === index ? "block" : "none";
-    });
-  }
+  handleNewsletterReset("m-newsletter", "m-email", "mc-accept-policy", ".m-subscribe-button");
+  handleNewsletterReset("d-newsletter", "d-email", "dc-accept-policy", ".d-subscribe-button");
 });
 
----------------------------
+/*----- "Register"-button color change on click -----*/
 
-var slideIndex = 1;
-showDivs(slideIndex);
+document.querySelector(".m-subscribe-button").addEventListener("click", (event) => {
+  const button = event.target;
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
+  button.style.backgroundColor = "#fff";
 
-function currentDiv(n) {
-  showDivs(slideIndex = n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" w3-white", "");
-  }
-  x[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " w3-white";
-}
-
-// Define slide indices for each carousel
-var slideIndices = {
-  mySlides1: 1,
-  mySlides2: 1,
-  mySlides3: 1,
-  mySlides4: 1
-};
-
-// Initialize each carousel
-showDivs('mySlides1', slideIndices.mySlides1);
-showDivs('mySlides2', slideIndices.mySlides2);
-showDivs('mySlides3', slideIndices.mySlides3);
-showDivs('mySlides4', slideIndices.mySlides4);
-
-// Function to navigate slides
-function plusDivs(carousel, n) {
-  slideIndices[carousel] += n;
-  showDivs(carousel, slideIndices[carousel]);
-}
-
-// Function to jump to a specific slide
-function currentDiv(carousel, n) {
-  slideIndices[carousel] = n;
-  showDivs(carousel, slideIndices[carousel]);
-}
-
-// Function to display the appropriate slide
-function showDivs(carousel, n) {
-  var i;
-  var slides = document.getElementsByClassName(carousel);
-  var dots = document.getElementsByClassName(carousel + "-dots");
-  
-  if (n > slides.length) { slideIndices[carousel] = 1; }
-  if (n < 1) { slideIndices[carousel] = slides.length; }
-  
-  // Hide all slides in the current carousel
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  
-  // Remove active class from dots in the current carousel
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" w3-white", "");
-  }
-  
-  // Show the current slide and set the active dot
-  slides[slideIndices[carousel] - 1].style.display = "block";  
-  dots[slideIndices[carousel] - 1].className += " w3-white";
-}
-*/
+  setTimeout(() => {
+      button.style.backgroundColor = "#4c759f";
+  }, 150);
+});

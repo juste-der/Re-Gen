@@ -4,20 +4,9 @@
 @import url("/CSS/layout/footer.css");
 @import url("/CSS/config/variables.css");
 @import url("/CSS/base/typography.css");
+@import url("/CSS/hero.css");
 
 /*----- Upper index styles -----*/
-.hero-quote {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 389px;
-  height: 141px;
-  gap: 10px;
-}
-
-.hero-banner img {
-  transform: translate(-30%);
-}
 
 /*----------------------------------------------------------------------------------------------------*/
 
@@ -147,14 +136,14 @@ h3 {
 }
 
 /*----- Section "Paint", "Carpet", "History" -----*/
-.paint, .chair, .wood, .commitment, .hero-banner /*, .history*/ {
+.paint, .chair, .wood, .commitment /*.history*/ {
   font-family: "IBM Plex Sans JP";
   position: relative;
   margin-top: 1rem;
   overflow: hidden;
 }
 
-.paint img, .carpet img, .chair img, .wood img, .commitment img, .hero-banner img/*, .history img*/ {
+.paint img, .carpet img, .chair img, .wood img, .commitment img/* .history img*/ {
   width: 200%;
   height: auto;
   object-fit: cover;
@@ -164,8 +153,7 @@ h3 {
 .carpet-title,
 .chair h2,
 .commitment h2,
-.wood h2,
-.hero-banner h2 {
+.wood h2 {
   color: #fff;
   position: absolute;
   bottom: 5rem;
@@ -202,8 +190,7 @@ h3 {
 .m-carpet-button,
 .chair button,
 .commitment button,
-.wood button,
-.hero-banner button {
+.wood button {
   position: absolute;
   bottom: 2rem;
   left: 1rem;
@@ -231,9 +218,6 @@ h3 {
 /*----- Changes for desktop -----*/
 
 @media (min-width: 700px) {
-  .hero-banner img {
-    transform: translate(0);
-  }
   .sustainability {
     flex-direction: row;
     gap: 1rem;
@@ -314,24 +298,22 @@ h3 {
   /*----- Paint -----*/
   .paint img,
   .chair img,
-  .sustainability img,
-  .hero-banner img {
+  .sustainability img {
     width: 100%;
     max-height: 50rem;
     object-fit: cover;
   }
   .paint h2,
   .carpet-title,
-  .chair h2,
-  .hero-banner h2 {
+  .chair h2 {
     font-size: var(--font-size-xxlarge);
     bottom: 10rem;
     left: 2rem;
     width: 50%;
   }
+
   .paint button,
-  .chair button,
-  .hero-banner button {
+  .chair button {
     font-size: var(--font-size-medium);
     width: 50%;
     bottom: 5rem;

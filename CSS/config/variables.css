@@ -1,15 +1,16 @@
 /* Variables */
 :root {
-    --color-black: #121212;
-    --color-white: #fff7e6;
-    --color-green: #799f85;
-    --color-birch: #d3b47f;
-    --color-brown: #59340e;
-    --font-size-xxsmall: 0.75rem;           /*----- 14px -----*/
-    --font-size-xsmall: 1rem;               /*----- 16px -----*/
-    --font-size-small: 1.125rem;            /*----- 18px -----*/
-    --font-size-medium: 1.25rem;            /*----- 20px -----*/
-    --font-size-large: 1.5rem;              /*----- 24px -----*/
-    --font-size-xlarge: 2rem;               /*----- 32px -----*/
-    --font-size-xxlarge: 3rem;              /*----- 48px -----*/
+  --color-black: #121212;
+  --color-white: #fff7e6;
+  --color-green: #799f85;
+  --color-birch: #d3b47f;
+  --color-brown: #59340e;
+  --font-size-xxsmall: 0.75rem; /*----- 14px -----*/
+  --font-size-xsmall: 1rem; /*----- 16px -----*/
+  --font-size-small: 1.125rem; /*----- 18px -----*/
+  --font-size-medium: 1.25rem; /*----- 20px -----*/
+  --font-size-large: 1.5rem; /*----- 24px -----*/
+  --font-size-xlarge: 2rem; /*----- 32px -----*/
+  --font-size-XL: 2.5rem; /*------40px-------*/
+  --font-size-xxlarge: 3rem; /*----- 48px -----*/
 }

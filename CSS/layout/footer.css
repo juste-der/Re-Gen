@@ -318,7 +318,7 @@ details[open] > summary::after {
   .m-newsletter-container,
   .m-subscribe-button,
   ::placeholder {
-    background-color: var(--color-green);
+    background-color: var(--color-blue);
     color: var(--color-white);
     border: 0.1rem solid var(--color-white);
   }

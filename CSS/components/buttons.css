@@ -1,0 +1,26 @@
+/* ----- Popup subscribe button ----*/
+
+.popup-subscribe-button {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  font-size: var(--font-size-xxsmall);
+  font-weight: normal;
+  color: #000;
+  background-color: var(--color-blue);
+  border: 0.1rem solid #000;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 0;
+}
+.popup-subscribe-button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.popup-subscribe-button,
+::placeholder {
+  background-color: transparent;
+  color: var(--color-white);
+  border: 0.1rem solid var(--color-white);
+}

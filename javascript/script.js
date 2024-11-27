@@ -6,7 +6,7 @@ function openNav() {
     sidenav.style.height = "100vh";
   } else {
     sidenav.style.width = "24rem";
-    sidenav.style.height = "48rem";
+    sidenav.style.height = "43rem";
   }
 }
 

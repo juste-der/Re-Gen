@@ -8,7 +8,7 @@
 .hero-banner img,
 .our-history img {
   width: 290%;
-  max-height: 774px;
+  max-height: 49rem;
   object-fit: cover;
   transform: translate(-53%);
 }
@@ -37,7 +37,6 @@
 }
 .hero-banner-content h2,
 .our-history-content h2 {
-  font-family: "IBM Plex Sans JP";
   font-size: 32px;
   font-weight: 500;
   line-height: 50px;
@@ -70,7 +69,6 @@
 }
 
 .hero-quote {
-  font-family: "IBM Plex Sans JP";
   margin: 1rem;
   text-align: center;
 }

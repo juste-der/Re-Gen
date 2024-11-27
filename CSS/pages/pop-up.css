@@ -18,9 +18,9 @@
   display: none;
 }
 .popup {
-  width: 20rem;
-  height: 25rem;
-  padding: 1.25rem;
+  width: 19rem;
+  height: 18rem;
+  padding: 0.8rem;
   background-color: transparent;
   text-align: left;
   border: none !important;
@@ -28,25 +28,28 @@
   color: var(--color-white);
   border: 0.1rem solid var(--color-white);
 }
+.popup p {
+  font-size: var(--font-size-xxsmall);
+}
 .popup h6 {
   margin: 1rem 0 1rem 0;
-  font-size: var(--font-size-medium);
+  font-size: var(--font-size-xmall);
   font-weight: normal;
 }
 .popup label {
   display: block;
   text-align: left;
-  margin: 1.25rem 0;
-  font-size: var(--font-size-xsmall);
+  margin: 0.5rem 0;
+  font-size: var(--font-size-xxsmall);
 }
 .popup input[type="email"] {
   width: 100%;
   padding: 0;
-  margin: 0 1.25rem auto auto;
+  margin: 0 1rem auto auto;
   border: none;
   background-color: transparent;
-  font-size: var(--font-size-small);
-  color: #fff;
+  font-size: var(--font-size-xsmall);
+  color: var(--color-white);
   display: block;
   border-bottom: 0.1rem solid var(--color-white);
 }
@@ -55,45 +58,21 @@
   align-items: center;
   justify-content: center;
   align-content: center;
-  font-size: var(--font-size-xsmall);
+  font-size: var(--font-size-xxsmall);
   margin-top: 0.6rem;
 }
 .popup-checkbox label {
   display: block;
   text-align: left;
   margin: 0.6rem;
-  font-size: var(--font-size-xsmall);
+  font-size: var(--font-size-xxsmall);
 }
 a.integrity-policy {
-  color: #fff;
+  color: var(--color-white);
   text-decoration: none;
 }
 a.integrity-policy:hover {
   text-decoration: underline !important;
-}
-.popup-subscribe-button {
-  width: 100%;
-  padding: 0.6rem;
-  margin-top: 0.8rem;
-  font-size: var(--font-size-xsmall);
-  font-weight: normal;
-  color: #000;
-  background-color: var(--color-blue);
-  border: 0.1rem solid #000;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  border-radius: 0;
-}
-.popup-subscribe-button:hover {
-  background-color: #fff;
-  color: #000;
-}
-
-.popup-subscribe-button,
-::placeholder {
-  background-color: var(--color-blue);
-  color: var(--color-white);
-  border: 0.1rem solid var(--color-white);
 }
 
 #popup-close {
@@ -102,16 +81,19 @@ a.integrity-policy:hover {
   right: 10px;
   background: transparent;
   color: var(--color-white);
-  font-size: 1.5rem;
+  font-size: 1rem;
   border: none;
   cursor: pointer;
 }
 
 @media (min-width: 700px) {
   .popup {
-    width: 35rem;
-    height: 32rem;
+    width: 37rem;
+    height: 33rem;
     padding: 1.5rem;
+  }
+  .popup p {
+    font-size: var(--font-size-medium);
   }
   .popup h6 {
     font-size: var(--font-size-xlarge);
@@ -123,13 +105,18 @@ a.integrity-policy:hover {
   }
   .popup-checkbox {
     gap: 1rem;
+    font-size: var(--font-size-large);
+  }
+  #popup-close {
+    font-size: 2rem;
+    right: 25px;
   }
 }
 
-@media (min-width: 1000px) {
+/* @media (min-width: 1000px) {
   .popup {
-    width: 53rem;
-    height: 42rem;
+    width: 50rem;
+    height: 45rem;
     padding: 2.5rem;
   }
   .popup p {
@@ -160,4 +147,4 @@ a.integrity-policy:hover {
     font-size: 2.5rem;
     right: 25px;
   }
-}
+} */

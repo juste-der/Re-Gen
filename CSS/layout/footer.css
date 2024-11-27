@@ -2,7 +2,6 @@
 
 /*----- The whole footer flex, centered and with padding -----*/
 .m-footer {
-  font-family: "IBM Plex Sans JP";
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -119,12 +118,6 @@
   color: #000;
 }
 
-/*----- Button "PRENUMERERA" background on press -----
-.m-subscribe-button:active,
-.d-subscribe-button:active {
-  background-color: #fff;
-}*/
-
 /*----- Dropdown menus centered and with margin -----*/
 .m-footer-links {
   display: flex;
@@ -235,7 +228,6 @@ details[open] > summary::after {
 
 .d-footer {
   margin: 3rem;
-  font-family: "IBM Plex Sans JP";
   display: grid;
   grid-template-columns: repeat(2, minmax(20rem, 1fr));
   grid-template-rows: 0.75fr 0.2fr 2fr 2fr 0.2fr 3fr 0.2fr 1fr 0.2fr auto;
@@ -302,7 +294,6 @@ details[open] > summary::after {
   display: flex;
   align-items: center;
 }
-
 
 .d-country {
   font-size: var(--font-size-medium);

@@ -1,1 +1,11 @@
+@import url("/CSS/base/reset.css");
+@import url("/CSS/base/typography.css");
 @import url("/CSS/layout/header.css");
+@import url("/CSS/layout/footer.css");
+@import url("/CSS/config/variables.css");
+@import url("/CSS/pages/hero.css");
+@import url("/CSS/lower-index.css");
+@import url("/CSS/components/banner.css");
+@import url("/CSS/pages/pop-up.css");
+@import url("/CSS/components/buttons.css");
+@import url("/CSS/layout/nav-menu.css");

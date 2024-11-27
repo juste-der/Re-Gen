@@ -1,3 +1,32 @@
-/*All global variables 
+/* Variables */
+:root {
+  --color-black: #121212;
+  --color-white: #fefefe;
+  --color-light-grey: #828282;
+  --color-green: #4f755b;
+  --color-darkgreen: #2f553b;
+  --color-birch: #ccbda4;
+  --color-brown: #59340e;
+  --color-red: #5e2222;
+  --color-lightblue: #84a3b8;
+  --color-blue: #4c759f;
+  --color-darkblue: #0b154f;
 
-/*Color variables*/
+  --font-size-xxsmall: 0.75rem; /*----- 14px -----*/
+  --font-size-xsmall: 1rem; /*----- 16px -----*/
+  --font-size-small: 1.125rem; /*----- 18px -----*/
+  --font-size-medium: 1.25rem; /*----- 20px -----*/
+  --font-size-large: 1.5rem; /*----- 24px -----*/
+  --font-size-xlarge: 2rem; /*----- 32px -----*/
+  --font-size-XL: 2.5rem; /*------40px-------*/
+  --font-size-xxlarge: 3rem; /*----- 48px -----*/
+
+  --font-weight-thin: 100;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+
+  --font-family-ibm-plex: "IBM Plex Sans JP", sans-serif;
+}

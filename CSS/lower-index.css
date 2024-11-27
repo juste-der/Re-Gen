@@ -1,0 +1,565 @@
+.sustainability {
+  display: flex;
+  flex-direction: column;
+}
+
+/*----- Section "Quote" -----*/
+
+.quote {
+  margin: 1rem;
+  text-align: center;
+}
+
+/*----- Section "Collection" -----*/
+
+.collection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  row-gap: 0.6rem;
+}
+
+h3 {
+  margin: 1rem;
+  font-size: var(--font-size-large);
+  font-weight: normal;
+  text-align: center;
+}
+
+/*----- Slides -----*/
+
+.item {
+  position: relative;
+  width: calc(50% - 1rem);
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.mySlides {
+  display: none;
+  width: 100%;
+}
+
+/*----- Arrow Buttons -----*/
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 20;
+  user-select: none;
+}
+
+.arrow.left {
+  left: 1rem;
+}
+
+.arrow.right {
+  right: 1rem;
+}
+
+/*----- Image Indicators -----*/
+.indicators {
+  position: absolute;
+  bottom: 0.85rem;
+  right: 0.6rem;
+  display: flex;
+  gap: 0.2rem;
+  z-index: 20;
+}
+
+.spanCircle {
+  width: 0.75rem;
+  height: 0.75rem;
+  border: 0.1rem solid white;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.spanCircle:hover {
+  transform: scale(1.2);
+}
+
+.spanCircle.active {
+  background-color: white;
+}
+
+/*----- Item Link -----*/
+.item a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.item img {
+  width: 100%;
+}
+
+/*----- Color pick -----*/
+.color-birch {
+  background-color: var(--color-birch);
+  border-radius: 50%;
+  border: 0.1rem solid #fff;
+  width: 1.25rem;
+  height: 1.25rem;
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
+}
+
+.color-rainbow {
+  background-image: linear-gradient(
+    to right,
+    var(--color-birch),
+    var(--color-birch),
+    var(--color-red),
+    var(--color-red)
+  );
+  border-radius: 50%;
+  border: 0.1rem solid #fff;
+  width: 1.25rem;
+  height: 1.25rem;
+  position: absolute;
+  top: 0.6rem;
+  left: 2rem;
+}
+
+/*----- Clickable Areas -----*/
+.carousel::before,
+.carousel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel::before {
+  left: 0;
+}
+
+.carousel::after {
+  right: 0;
+}
+
+/*----- Item Link (Product name) -----*/
+.item a {
+  position: absolute;
+  color: #fff;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-size: var(--font-size-xsmall);
+  margin-top: 0.5rem;
+  bottom: 0.6rem;
+  left: 0.6rem;
+}
+
+/*----- Collection button -----*/
+.collection-button {
+  background-color: transparent;
+  width: 100%;
+  padding: 0.6rem;
+  margin: 0.8rem;
+  color: #000;
+  font-size: var(--font-size-xsmall);
+  border: 0.1rem solid #000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/*----- Section "Paint", "Carpet", "Chair", "Wood", "Commitment", "History" -----*/
+.paint,
+.chair,
+.wood,
+.commitment {
+  position: relative;
+  margin-top: 1rem;
+  overflow: hidden;
+}
+
+/*----- Darker img on commitment and wood -----*/
+.dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.commitment img,
+.wood img,
+.paint img {
+  vertical-align: top;
+}
+
+/*----- Images with text -----*/
+.paint img,
+  .carpet img,
+  .chair img,
+  .wood img,
+  .commitment img
+  
+  /*, .history img*/ {
+  width: 200%;
+  height: auto;
+  object-fit: cover;
+  transform: translateX(-25%);
+}
+.carpet img {
+  transform: translateX(-35%);
+}
+
+.paint h2,
+.carpet-title,
+.chair h2,
+.commitment h2,
+.wood h2 {
+  color: #000;
+  position: absolute;
+  bottom: 5rem;
+  left: 1rem;
+}
+
+.commitment h2,
+.wood h2 {
+  color: #fff;
+}
+
+/*----- Section "Carpet" -----*/
+
+.carpet {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 1rem;
+  overflow: hidden;
+}
+
+.carpet-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--color-darkgreen);
+}
+
+.carpet-description {
+  color: #fff;
+  justify-self: center;
+  margin: 3rem 3rem 0 3rem;
+}
+
+.carpet p {
+  color: #fff;
+  justify-self: center;
+  margin: 2rem 3rem;
+}
+
+/*----- Buttons (default mobile view -----*/
+
+.paint button,
+.m-carpet-button,
+.chair button,
+.commitment button,
+.wood button {
+  position: absolute;
+  bottom: 2rem;
+  left: 1rem;
+  background-color: transparent;
+  width: 90%;
+  padding: 0.6rem;
+  margin-top: 0.8rem;
+  color: #000;
+  font-size: var(--font-size-xsmall);
+  border: 0.1rem solid #000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.commitment button,
+.wood button {
+  color: #fff;
+  border: 0.1rem solid #fff;
+}
+
+.d-carpet-button {
+  background-color: transparent;
+  width: 90%;
+  padding: 0.6rem;
+  margin-top: 0.8rem;
+  color: #000;
+  font-size: var(--font-size-xsmall);
+  border: 0.1rem solid #000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/*----- Changes for desktop -----*/
+
+@media (min-width: 700px) {
+  .paint img,
+  .carpet img,
+  .chair img,
+  .wood img,
+  .commitment img,
+  .sustainability img {
+    width: 100%;
+    height: 50rem;
+    object-fit: cover;
+    transform: translateX(0);
+  }
+
+  .sustainability {
+    justify-content: center;
+    flex-direction: row;
+    margin: 1rem;
+    gap: 1rem;
+  }
+
+  .commitment h2,
+  .wood h2 {
+    bottom: 10rem;
+  }
+
+  .commitment button,
+  .wood button {
+    width: 50%;
+    bottom: 7rem;
+  }
+
+  /*----- Collection -----*/
+  .collection {
+    margin: 1rem 5rem;
+    max-width: 100%;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    justify-self: center;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .item {
+    width: 49%;
+  }
+
+  .item a {
+    font-size: var(--font-size-large);
+  }
+
+  .color-birch {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .color-rainbow {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .item a {
+    font-size: var(--font-size-large);
+    bottom: 1rem;
+    left: 1rem;
+  }
+
+  .indicators {
+    bottom: 1.5rem;
+    right: 2rem;
+    gap: 1rem;
+  }
+
+  .collection-button {
+    margin: 0;
+    width: 100%;
+  }
+
+  /*----- Carpet -----*/
+  .carpet {
+    flex-direction: row-reverse;
+  }
+
+  .carpet-info {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    background-color: #fff;
+  }
+
+  .m-carpet-button {
+    display: none;
+  }
+
+  .d-carpet-button {
+    font-size: var(--font-size-medium);
+    width: 85%;
+    bottom: 5rem;
+    left: 2rem;
+    margin: 2rem 3rem;
+  }
+
+  .carpet-description {
+    font-size: var(--font-size-xxlarge);
+  }
+
+  .carpet p {
+    font-size: var(--font-size-large);
+  }
+
+  /*----- Paint -----*/
+  .paint h2,
+  .carpet-title,
+  .chair h2 {
+    font-size: var(--font-size-xxlarge);
+    bottom: 10rem;
+    left: 2rem;
+    width: 50%;
+  }
+
+  .paint button,
+  .chair button {
+    font-size: var(--font-size-medium);
+    width: 50%;
+    bottom: 5rem;
+    left: 2rem;
+  }
+
+  .sustainability {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  /*----- Collection -----*/
+  .collection {
+    margin: 1rem 5rem;
+    max-width: 100%;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    justify-self: center;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .item {
+    width: 49%;
+  }
+
+  .color-birch {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .color-rainbow {
+    width: 2rem;
+    height: 2rem;
+    left: 3rem;
+  }
+
+  .item a {
+    font-size: var(--font-size-large);
+    bottom: 1rem;
+    left: 1rem;
+  }
+
+  .item i {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .collection-button {
+    margin: 0;
+    width: 100%;
+  }
+
+  /*----- Carpet -----*/
+  .carpet {
+    flex-direction: row-reverse;
+  }
+
+  .carpet-info {
+    display: flex;
+    width: 100%;
+    background-color: #fff;
+  }
+
+  .carpet img {
+    width: 100%;
+    height: 50rem;
+  }
+
+  .m-carpet-button {
+    display: none;
+  }
+
+  .d-carpet-button {
+    font-size: var(--font-size-medium);
+    width: 85%;
+    bottom: 5rem;
+    left: 2rem;
+    margin: 2rem 3rem;
+  }
+
+  .carpet-description {
+    color: #000;
+    font-size: var(--font-size-xxlarge);
+  }
+
+  .carpet p {
+    color: #000;
+    font-size: var(--font-size-large);
+  }
+
+  /*----- Paint -----*/
+  .paint img,
+  .chair img,
+  .sustainability img {
+    width: 100%;
+    max-height: 50rem;
+    object-fit: cover;
+  }
+
+  .paint h2,
+  .carpet-title,
+  .chair h2 {
+    font-size: var(--font-size-xxlarge);
+    bottom: 10rem;
+    left: 2rem;
+    width: 50%;
+  }
+
+  .carpet-title {
+    color: #fff;
+  }
+
+  .paint button,
+  .chair button {
+    font-size: var(--font-size-medium);
+    width: 50%;
+    bottom: 5rem;
+    left: 2rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .commitment button,
+  .wood button {
+    width: 25%;
+    bottom: 7rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .d-carpet-button {
+    display: none;
+  }
+}

@@ -6,7 +6,6 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
-    <meta name="description" content="Add description" />
     <link rel="stylesheet" href="/CSS/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,16 +26,30 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/CSS/base/globals.css" />
-    <link rel="stylesheet" href="/CSS/layout/footer.css" />
-    <link rel="stylesheet" href="/CSS/config/variables.css" />
-    <title>ReGen Officiella Webbplats</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+    <title>ReGen Officiella Webbplats</title>
+    <link rel="icon" type="favicon" href="/icons/favicon.ico">
   </head>
   <body>
+    <div class="popup-overlay"></div>
+    <div class="popup-container">
+      <div class="popup">
+        <button id="popup-close">&times;</button>
+        <h6>Återställ skogar med din förbokning<br></h6>
+        <p>Förbeställ idag – varje order bidrar till återplantering och skydd av biologisk mångfald. 
+            Tillsammans gör vi skillnad för framtiden.</p>
+        <label for="popup-email">Din emailadress</label>
+        <input type="email" id="popup-email" placeholder="example@example.com">
+        <div class="popup-checkbox">
+          <input type="checkbox" id="popup-accept-policy">
+          <label for="popup-accept-policy">Jag accepterar <a href="#" class= integrity-policy>integritetspolicyn</a></label>  
+        </div>
+        <button class="popup-subscribe-button">REGISTRERA DIG  <i class="fa-solid fa-angle-right"></i></button>
+      </div>
+    </div>
     <div class="header">
       <div class="hamburger-btn">
         <img src="/icons/hamburger.svg" alt="Side Menu" onclick="openNav()" />
@@ -49,30 +62,29 @@
         <div class="menu-items">
           <input
             class="searchInput"
-            id="search-field"
             type="search"
             placeholder="Vad letar du efter?"
           />
           <ul>
             <li>
-              <a href="#"> Nyheter</a
+              <a href="#">NYHETER</a
               ><img src="/icons/arrow.svg" alt="News icon" />
             </li>
             <li>
-              <a href="#">Inspiration</a
+              <a href="#">INSPIRATION</a
               ><img src="/icons/arrow.svg" alt="Inspiration icon" />
             </li>
             <li>
-              <a href="#"> Möbler</a
+              <a href="#">MÖBLER</a
               ><img src="/icons/arrow.svg" alt="Furniture icon" />
             </li>
             <li>
-              <a href="#"> Inredning</a
+              <a href="#">INREDNING</a
               ><img src="/icons/arrow.svg" alt="Decor icon" />
             </li>
             <li>
               <img src="/icons/green-heart.svg" alt="" />
-              <a href="#"> Favoriter</a>
+              <a href="#">FAVORITER</a>
               <img src="/icons/arrow.svg" alt="" />
             </li>
           </ul>
@@ -83,15 +95,15 @@
               class="menu-divider"
             />
             <li>
-              <a href="#"> Mina Sidor</a
+              <a href="#">MINA SIDOR</a
               ><img src="/icons/arrow.svg" alt="My Pages icon" />
             </li>
             <li>
-              <a href="#">Kundservice</a
+              <a href="#">KUNDSERVICE</a
               ><img src="/icons/arrow.svg" alt="Customer Service icon" />
             </li>
             <li>
-              <a href="#">Ändra Språk</a
+              <a href="#">ÄNDRA SPRÅK</a
               ><img src="/icons/arrow.svg" alt="Change Language icon" />
             </li>
           </ul>
@@ -100,25 +112,26 @@
       <div class="left-side">
         <input
           class="searchInput"
-          id="search-field"
           type="search"
           placeholder="Vad letar du efter?"
         />
-        <ul>
-          <li><a href="#">NYHETER</a></li>
-          <li><a href="#">MÖBLER</a></li>
-          <li><a href="#">INREDNING</a></li>
-          <li><a href="#">REA</a></li>
-        </ul>
+        <div class="link-container">
+          <a href="#" class="link">NYHETER</a>
+          <a href="#" class="link">MÖBLER</a>
+          <a href="#" class="link">INREDNING</a>
+          <a href="#" class="link">REA</a>
+        </div>
+        
       </div>
       <div class="logo-homepage">
         <a href="/">
-          <img src="/images/ReGen-logo.png" alt="Website logo" />
+          <img src="/icons/logo.svg" alt="Website logo" />
         </a>
       </div>
       <div class="right-side">
         <div class="shopping-cart">
           <a href="#">
+            
             <img src="/icons/cart.svg" alt="Shopping cart" />
             <p>FÖRBOKA</p>
           </a>
@@ -131,128 +144,325 @@
         </div>
       </div>
     </div>
+    <div class="news-ticker">
+      <span>LANSERING JANUARI 2025 - BJÖRK FAMILJEN - LANSERING JANUARI 2025 - BJÖRK FAMILJEN - LANSERING JANUARI 2025 - BJÖRK FAMILJEN - LANSERING JANUARI 2025 - BJÖRK FAMILJEN - LANSERING JANUARI 2025 - BJÖRK FAMILJEN - LANSERING JANUARI 2025 - BJÖRK FAMILJEN - LANSERING JANUARI 2025 - BJÖRK FAMILJEN  </span>
+    </div>
+    <div class="hero-banner">
+      <img src="/images/enviroment-picture1.png" alt="Björkfamiljen collection">
+      <div class="hero-banner-content">
+      <h2>BJÖRK FAMILJEN</h2>
+      <button>VISA KOLLEKTION <i class="fa-solid fa-angle-right"></i></button>
+      </div>
+    </div>
+    <p class="quote">Vi skapar produkter inte bara för personen, men också för planeten. 
+        Med hög kvalitativa material och miljötänkande produktionsprocesser.
+    </p>
+    <div class="our-history">
+      <img src="/images/history.png" alt="Our history image">
+      <div class="our-history-content">
+        <h2>REGENS HISTORIA</h2>
+      <p>ReGen föddes ur en passion för att skapa möbler som förenar tidlös design och hållbarhet. Inspirerade av nordisk natur och hantverk använder vi ekologiska material som björk och återvunna resurser.
+        Vårt mål är att skapa produkter som håller i generationer och bidra till en grönare framtid – för hemmet, för naturen, för oss alla.</p>
+      <button>LÄS VIDARE OM VÅR HISTORIA <i class="fa-solid fa-angle-right"></i></button>
+      </div>
+    </div>
+    <div class="sustainability">
+      <div class="commitment">
+        <img src="/images/trees.png" alt="Trees looking up">
+        <div class="dark-overlay"></div>
+        <h2>UPPTÄCK VÅRT ENGAGEMANG MOT HÅLLBARHET</h2>
+        <button class="commitment-button">LÄS MER <i class="fa-solid fa-angle-right"></i></button>
+      </div>
+      <div class="wood">
+        <img src="/images/birch.png" alt="Birch trees">
+        <div class="dark-overlay"></div>
+        <h2>KVALITETSTRÄ FRÅN CERTIFIERADE SVENSKA SKOGAR</h2>
+        <button class="wood-button">LÄS MER <i class="fa-solid fa-angle-right"></i></button>
+      </div>
+    </div>
+      <p class="quote">Välkommen hem till Björk familjen – en kollektion där hållbarhet möter tidlös design, 
+      skapad för att vara en del av din familj i generationer.<br>Lansering februari 2024.</p>
+    <div class="chair">
+      <img src="/images/chair-gif.gif" alt="Chair alternating colors">
+      <h2>STOLEN SOFIA</h2>
+      <button class="chair-button">SE PRODUKT <i class="fa-solid fa-angle-right"></i></button>
+    </div>
+    <h3>HANTVERK</h3>
+    <div class="collection">
 
-    <footer class="footer">
-      <div class="footer-links">
+        <div class="item">
+          <div class="carousel" data-carousel="item1">
+            <img class="mySlides item1" src="/images/sofia1.png" alt="Item 1 Slide 1">
+            <img class="mySlides item1" src="/images/sofia2.png" alt="Item 1 Slide 2">
+            <img class="mySlides item1" src="/images/sofia3.png" alt="Item 1 Slide 3">
+            <img class="mySlides item1" src="/images/sofia4.png" alt="Item 1 Slide 4">
+            <img class="mySlides item1" src="/images/sofia5.png" alt="Item 1 Slide 5">
+            <img class="mySlides item1" src="/images/room-sofia.png" alt="Item 1 Slide 6">
+            <div class="arrow left" data-direction="-1">&#10094;</div>
+            <div class="arrow right" data-direction="1">&#10095;</div>
+            <div class="indicators">
+              <span class="spanCircle circle1" data-index="0"></span>
+              <span class="spanCircle circle2" data-index="1"></span>
+              <span class="spanCircle circle3" data-index="2"></span>
+              <span class="spanCircle circle2" data-index="3"></span>
+              <span class="spanCircle circle3" data-index="4"></span>
+              <span class="spanCircle circle3" data-index="5"></span>
+            </div>
+          </div>
+          <div class="color-birch"></div>
+          <div class="color-rainbow"></div>
+          <a href="#">SOFIA</a>
+        </div>
+     
+      <div class="item">
+        <div class="carousel" data-carousel="item2">
+          <img class="mySlides item2" src="/images/clark1.png" alt="Item 2 Slide 1">
+          <img class="mySlides item2" src="/images/clark2.png" alt="Item 2 Slide 2">
+          <img class="mySlides item2" src="/images/clark3.png" alt="Item 2 Slide 3">
+          <img class="mySlides item2" src="/images/clark4.png" alt="Item 2 Slide 4">
+          <img class="mySlides item2" src="/images/clark5.png" alt="Item 2 Slide 5">
+          <img class="mySlides item2" src="/images/room-clark.png" alt="Item 2 Slide 6">
+          <div class="arrow left" data-direction="-1">&#10094;</div>
+          <div class="arrow right" data-direction="1">&#10095;</div>
+          <div class="indicators">
+            <span class="spanCircle circle1" data-index="0"></span>
+            <span class="spanCircle circle2" data-index="1"></span>
+            <span class="spanCircle circle3" data-index="2"></span>
+            <span class="spanCircle circle2" data-index="3"></span>
+            <span class="spanCircle circle3" data-index="4"></span>
+            <span class="spanCircle circle3" data-index="5"></span>
+          </div>
+        </div>
+        <div class="color-birch"></div>
+        <div class="color-rainbow"></div>
+        <a href="#">CLARK</a>
+      </div>
+
+      <div class="item">
+        <div class="carousel" data-carousel="item3">
+          <img class="mySlides item3" src="/images/bosse1.png" alt="Item 3 Slide 1">
+          <img class="mySlides item3" src="/images/bosse2.png" alt="Item 3 Slide 2">
+          <img class="mySlides item3" src="/images/bosse3.png" alt="Item 3 Slide 3">
+          <img class="mySlides item3" src="/images/bosse4.png" alt="Item 3 Slide 4">
+          <img class="mySlides item3" src="/images/bosse5.png" alt="Item 3 Slide 5">
+          <img class="mySlides item3" src="/images/room-bosse.png" alt="Item 3 Slide 6">
+          <div class="arrow left" data-direction="-1">&#10094;</div>
+          <div class="arrow right" data-direction="1">&#10095;</div>
+          <div class="indicators">
+            <span class="spanCircle circle1" data-index="0"></span>
+            <span class="spanCircle circle2" data-index="1"></span>
+            <span class="spanCircle circle3" data-index="2"></span>
+            <span class="spanCircle circle2" data-index="3"></span>
+            <span class="spanCircle circle3" data-index="4"></span>
+            <span class="spanCircle circle3" data-index="5"></span>
+          </div>
+        </div>
+        <div class="color-birch"></div>
+        <div class="color-rainbow"></div>
+        <a href="#">BOSSE</a>
+      </div>
+
+      <div class="item">
+        <div class="carousel" data-carousel="item4">
+          <img class="mySlides item4" src="/images/alma1.png" alt="Item 4 Slide 1">
+          <img class="mySlides item4" src="/images/alma2.png" alt="Item 4 Slide 2">
+          <img class="mySlides item4" src="/images/alma3.png" alt="Item 4 Slide 3">
+          <img class="mySlides item4" src="/images/alma4.png" alt="Item 4 Slide 4">
+          <img class="mySlides item4" src="/images/alma5.png" alt="Item 4 Slide 5">
+          <div class="arrow left" data-direction="-1">&#10094;</div>
+          <div class="arrow right" data-direction="1">&#10095;</div>
+          <div class="indicators">
+            <span class="spanCircle circle1" data-index="0"></span>
+            <span class="spanCircle circle2" data-index="1"></span>
+            <span class="spanCircle circle3" data-index="2"></span>
+            <span class="spanCircle circle2" data-index="3"></span>
+            <span class="spanCircle circle3" data-index="4"></span>
+          </div>
+        </div>
+        <div class="color-birch"></div>
+        <div class="color-rainbow"></div>
+        <a href="#">ALMA</a>
+      </div>
+      
+      <button class="collection-button">VISA KOLLEKTION <i class="fa-solid fa-angle-right"></i></button>
+    </div>
+    <div class="carpet">
+      <div class="carpet-info">
+        <h2 class="carpet-description">ÅTERBRUKAD MATTA<br>HÅLLBART OCH UNIKT</h2>
+        <p>Vår handgjorda matta av återvunna tygbitar är ett hållbart val som sparar resurser och minskar avfall. 
+          Varje matta är unik – en symbol för omtanke om planeten.</p>
+          <button class="d-carpet-button">VISA PRODUKT <i class="fa-solid fa-angle-right"></i></button>
+      </div>
+      <div class="carpet-img">
+        <img src="/images/carpet.png" alt="Carpet">
+        <h2 class="carpet-title">MATTA</h2>
+        <button class="m-carpet-button">VISA PRODUKT <i class="fa-solid fa-angle-right"></i></button>
+      </div>
+    </div>
+    </div>
+    <div class="paint">
+      <img src="/images/clock-gif.gif" alt="Clock alternating colors">
+      <h2>VI FÄRGAR OM FÖR ATT FÖRSÄKRA DINA ÖNSKEMÅL</h2>
+      <button class="paint-button">BÖRJA DESIGNA <i class="fa-solid fa-angle-right"></i></button>
+    </div>
+    <div class="text-banner">
+      <div class="scrolling-text">
+        FÖRBOKA IDAG - VARJE ORDER BIDRAR TILL ÅTERPLANTERING OCH SKYDD AV BIOLOGISK MÅNGFALD - FÖRBOKA IDAG - TILLSAMMANS GÖR VI SKILLNAD -
+        FÖRBOKA IDAG - VARJE ORDER BIDRAR TILL ÅTERPLANTERING OCH SKYDD AV BIOLOGISK MÅNGFALD - FÖRBOKA IDAG - TILLSAMMANS GÖR VI SKILLNAD
+      </div>
+    </div>
+
+
+    <footer class="m-footer">
+      <div class="m-newsletter-container">
+        <h6>Återställ skogar med din förbokning<br></h6>
+          <p>Förbeställ idag – varje order bidrar till återplantering och skydd av biologisk mångfald. 
+            Tillsammans gör vi skillnad för framtiden.</p>
+        <label for="m-email">Din emailadress</label>
+        <input type="email" id="m-email" placeholder="example@example.com">
+    
+        <div class="m-checkbox-container">
+            <input type="checkbox" id="mc-accept-policy">
+            <label for="mc-accept-policy">Jag accepterar <a href="#">integritetspolicyn</a></label>
+        </div>
+    
+        <button class="m-subscribe-button">REGISTRERA DIG  <i class="fa-solid fa-angle-right"></i></button>
+    </div>
+      <div class="m-footer-links">
         <details>
           <summary>Kundservice</summary>
-          <div class="dropdown-content">
+          <div class="m-dropdown-content">
             <details>
               <summary>Kontakta oss</summary>
-              <div class="dropdown-content">
-                <p class="contact-content">
-                  Varmt välkommen att upptäcka vårt sortiment online, eller hör
-                  av dig om du har frågor – vi finns här för dig.<br /><br />
-                  Tel: +46 70-001 10 10<br />
-                  Måndag - Fredag 08:00-16:00<br />
-                  (Under storhelg kan öppetiderna variera.)<br />
-                  Epost: info@ReGen.se
-                </p>
+              <div class="m-dropdown-content">
+              <p class="m-contact-content">Varmt välkommen att upptäcka vårt sortiment online, eller hör av dig om du har frågor – vi finns här för dig.<br><br>
+                Tel: +46 70-001 10 10<br>
+                Måndag - Fredag 08:00-16:00<br>
+                (Under storhelg kan öppetiderna variera.)<br>
+                Epost: info@ReGen.se</p>
               </div>
             </details>
-            <p>Beställning</p>
-            <p>Betalning</p>
-            <p>Leverans</p>
-            <p>Retur</p>
-            <p>Vanliga frågor & svar</p>
-            <p>Köpvillkor</p>
-            <p>Hitta butik</p>
-            <p>Integritetspolicy</p>
-            <p>Cookies</p>
+            <a href="#">Förbokning</a><br>
+            <a href="#">Vanliga frågor & svar</a><br>
+            <a href="#">Köpvillkor</a><br>
+            <a href="#">Integritetspolicy</a><br>
+            <a href="#">Cookies</a>
           </div>
         </details>
         <details>
           <summary>Företagsinformation</summary>
-          <div class="dropdown-content">
-            <p>Om ReGen</p>
-            <p>Karriär</p>
-            <p>Hållbarhet</p>
-            <p>Affiliates</p>
+          <div class="m-dropdown-content">
+            <a href="#">Om ReGen</a><br>
+            <a href="#">Karriär</a><br>
+            <a href="#">Hållbarhet</a><br>
+            <a href="#">Affiliates</a>
           </div>
         </details>
         <details>
           <summary>Kollektioner</summary>
-          <div class="dropdown-content">
-            <p>"Kollektion 1"</p>
-            <p>"Kollektion 2"</p>
-            <p>"Kollektion 3"</p>
+          <div class="m-dropdown-content">
+            <a href="#">"Kollektion 1"</a><br>
+            <a href="#">"Kollektion 2"</a><br>
+            <a href="#">"Kollektion 3"</a>
           </div>
         </details>
       </div>
-      <div class="social-icons">
-        <a href="https://www.facebook.com/" target="_blank" class="social-icon">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="1.75rem"
-            height="1.75rem"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="#000"
-            stroke-width="0.75"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="social-icon"
-          >
-            <path
-              d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
-            />
-          </svg>
+      <div class="m-social-icons">
+        <a href="https://www.facebook.com/" target="_blank" class="m-social-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.75rem" height="1.75rem" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" class="m-social-icon"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
         </a>
-        <a
-          href="https://www.instagram.com/"
-          target="_blank"
-          class="social-icon"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="1.75rem"
-            height="1.75rem"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="#000"
-            stroke-width="0.75"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="social-icon"
-          >
-            <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-          </svg>
+        <a href="https://www.instagram.com/" target="_blank" class="m-social-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.75rem" height="1.75rem" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" class="m-social-icon"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
         </a>
-        <a href="https://www.twitter.com/" target="_blank" class="social-icon">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="1.75rem"
-            height="1.75rem"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="#000"
-            stroke-width="0.75"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="social-icon"
-          >
-            <path
-              d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"
-            />
-          </svg>
+        <a href="https://www.twitter.com/" target="_blank" class="m-social-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.75rem" height="1.75rem" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" class="m-social-icon"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
         </a>
       </div>
-      <div class="payment-icons">
-        <img
-          class="footer-payment-visa"
-          src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Visa_2014.svg"
-        />
-        <img
-          class="footer-payment-mastercard"
-          src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg"
-        />
-        <img
-          class="footer-payment-paypal"
-          src="https://upload.wikimedia.org/wikipedia/commons/3/39/PayPal_logo.svg"
-        />
+      <div class="m-payment-icons">
+        <img class="footer-payment-visa" src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Visa_2014.svg">
+        <img class="footer-payment-mastercard" src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg">
+        <img class="footer-payment-paypal" src="https://upload.wikimedia.org/wikipedia/commons/3/39/PayPal_logo.svg">
       </div>
+    </footer>
+
+    <footer class="d-footer">
+      <img src="/icons/logo.svg" alt="Website logo" class="d-footer-top-logo">
+      <span class="d-line"></span>
+      <section class="d-grid-item d-grid-info d-my-page">
+        <h4>MINA SIDOR</h4>
+        <p>Mina förbokningar</p>
+        <p>Min profil</p>
+        <p>Mina favoriter</p>
+      </section>
+      <section class="d-grid-item d-grid-info d-services">
+        <h4>VÅRA TJÄNSTER</h4>
+        <p>Designa din egna</p>
+        <p>Våra färger</p>
+      </section>
+      <section class="d-grid-item d-grid-info d-info">
+        <h4>INFORMATION</h4>
+        <p>Om ReGen</p>
+        <p>Hållbarhet</p>
+        <p>Jobba hos oss</p>
+        <p>Våra material</p>
+      </section>
+      <section class="d-grid-item d-grid-info d-policies">
+        <h4>VILLKOR</h4>
+        <p>Allmäna villkor</p>
+        <p>Affiliates</p>
+        <p>Cookies</p>
+        <p>Personuppgiftspolicy</p>
+      </section>
+      <span class="d-line"></span>
+      <section class="d-grid-item d-register">
+        <div class="d-newsletter-container">
+          <h6>Återställ skogar med din förbokning<br></h6>
+          <p>Förbeställ idag – varje order bidrar till återplantering och skydd av biologisk mångfald. 
+            Tillsammans gör vi skillnad för framtiden.</p>
+          <label for="d-email">Din emailadress</label>
+          <input type="email" id="d-email" placeholder="example@example.com">
+          <div class="d-checkbox-container">
+            <input type="checkbox" id="dc-accept-policy">
+            <label for="dc-accept-policy">Jag accepterar <a href="#">integritetspolicyn</a></label>
+          </div>
+          <button class="d-subscribe-button">REGISTRERA DIG</button>
+      </section>
+      <section class="d-grid-item d-welcome-text">
+        <p>Varmt välkommen att upptäcka vårt sortiment online, eller hör av dig om du har frågor – vi finns här för dig.<br><br>
+  
+          Tel: +46 70-001 10 10<br>
+          Måndag - Fredag 08:00-16:00<br>
+          (Under storhelg kan öppetiderna variera.)<br><br>
+          
+          Epost: info@ReGen.se
+          </p>
+      </section>
+      <span class="d-line"></span>
+      <section class="d-grid-item d-payment-text">
+        <h4>Säkra betalningar</h4>
+        <p>Vill du veta mer om våra betalalternativ?</p>
+      </section>
+      <section class="d-grid-item d-payment-icons">
+        <img class="footer-payment-visa" src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Visa_2014.svg">
+        <img class="footer-payment-mastercard" src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg">
+        <img class="footer-payment-paypal" src="https://upload.wikimedia.org/wikipedia/commons/3/39/PayPal_logo.svg">
+      </section>
+      <span class="d-line"></span>
+      <section class="d-grid-item d-logo">
+        <img src="/icons/logo.svg" alt="Website logo" class="d-footer-logo">
+      </section>
+      <section class="d-grid-item d-language">
+        <details>
+          <summary>
+            <img class="d-flag" src="https://www.svgrepo.com/show/401767/flag-for-sweden.svg">
+            Sverige
+            </summary>
+            <div class="d-dropdown-content">
+            <img class="d-flag" src="https://www.svgrepo.com/show/401788/flag-for-united-kingdom.svg">
+            UK English
+            </div>
+        </details>
+      </section>
     </footer>
     <script src="/javascript/script.js"></script>
   </body>

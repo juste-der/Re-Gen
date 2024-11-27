@@ -1,0 +1,125 @@
+.hero-banner,
+.our-history {
+  font-style: normal;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+.hero-banner img,
+.our-history img {
+  width: 290%;
+  max-height: 49rem;
+  object-fit: cover;
+  transform: translate(-53%);
+}
+.hero-banner-content,
+.our-history-content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  z-index: 1;
+  gap: 1rem;
+}
+.hero-banner-content {
+  bottom: 65%;
+  left: 25%;
+  text-align: center;
+  width: 12.5rem;
+}
+.our-history-content {
+  bottom: 25%;
+  left: 13%;
+  width: 18rem;
+  text-align: left;
+}
+.hero-banner-content h2,
+.our-history-content h2 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 50px;
+  text-align: center;
+}
+.our-history-content p {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.hero-banner button,
+.our-history button {
+  background-color: transparent;
+  padding: 0.6rem;
+  height: 3rem;
+  color: #fff;
+  cursor: pointer;
+  font-size: var(--font-size-xsmall);
+  border: 0.1rem solid var(--color-white);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.hero-banner button {
+  width: 11.5rem;
+}
+
+.our-history button {
+  width: 18rem;
+}
+
+.hero-quote {
+  margin: 1rem;
+  text-align: center;
+}
+
+.hero-quote p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #fff;
+  margin: 0;
+}
+@media (min-width: 425px) {
+  .hero-banner img,
+  .our-history img {
+    width: 200%;
+    max-height: 774px;
+    object-fit: cover;
+    transform: translate(-50%);
+  }
+  .hero-banner-content,
+  .our-history-content {
+    bottom: 3rem;
+    left: 2rem;
+  }
+  .hero-banner-content h2,
+  .our-history-content h2 {
+    text-align: left;
+  }
+}
+@media (min-width: 766px) {
+  .hero-banner img,
+  .our-history img {
+    transform: translate(0);
+    width: 100%;
+    max-height: 50rem;
+    object-fit: cover;
+  }
+  .hero-banner-content {
+    width: 23rem;
+    align-items: baseline;
+  }
+  .hero-banner-content h2 {
+    font-size: var(--font-size-XL);
+  }
+  .hero-banner-content button {
+    font-size: var(--font-size-medium);
+    width: 14rem;
+    height: 3rem;
+  }
+  .our-history-content {
+    width: 20rem;
+    align-items: baseline;
+    gap: 1.5rem;
+  }
+}

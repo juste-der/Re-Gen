@@ -89,35 +89,86 @@ document.addEventListener("DOMContentLoaded", () => {
 /*----- Reset subsribe form when clicking "Register" -----*/
 
 document.addEventListener("DOMContentLoaded", () => {
-  const handleNewsletterReset = (formId, emailInputId, checkboxId, buttonClass) => {
-      const emailInput = document.getElementById(emailInputId);
-      const acceptPolicyCheckbox = document.getElementById(checkboxId);
-      const subscribeButton = document.querySelector(buttonClass);
+  const handleNewsletterReset = (emailInputId, checkboxId, buttonClass) => {
+    const emailInput = document.getElementById(emailInputId);
+    const acceptPolicyCheckbox = document.getElementById(checkboxId);
+    const subscribeButton = document.querySelector(buttonClass);
 
-      if (emailInput && acceptPolicyCheckbox && subscribeButton) {
-          subscribeButton.addEventListener("click", () => {
-              if (acceptPolicyCheckbox.checked && emailInput.value !== "") {
-                  emailInput.value = "";
-                  acceptPolicyCheckbox.checked = false;
-              } else {
-                  alert("Please fill in your email and accept the policy before subscribing.");
-              }
-          });
-      }
+    if (emailInput && acceptPolicyCheckbox && subscribeButton) {
+      subscribeButton.addEventListener("click", () => {
+        if (acceptPolicyCheckbox.checked && emailInput.value !== "") {
+          emailInput.value = "";
+          acceptPolicyCheckbox.checked = false;
+        } else {
+          alert(
+            "Please fill in your email and accept the policy before subscribing."
+          );
+        }
+      });
+    }
   };
 
-  handleNewsletterReset("m-newsletter", "m-email", "mc-accept-policy", ".m-subscribe-button");
-  handleNewsletterReset("d-newsletter", "d-email", "dc-accept-policy", ".d-subscribe-button");
+  // Main newsletter form
+  handleNewsletterReset("m-email", "mc-accept-policy", ".m-subscribe-button");
+
+  // Desktop newsletter form
+  handleNewsletterReset("d-email", "dc-accept-policy", ".d-subscribe-button");
+
+  // Popup newsletter form
+  handleNewsletterReset(
+    "popup-email",
+    "popup-accept-policy",
+    ".popup-subscribe-button"
+  );
 });
 
 /*----- "Register"-button color change on click -----*/
 
-document.querySelector(".m-subscribe-button").addEventListener("click", (event) => {
-  const button = event.target;
+document
+  .querySelector(".m-subscribe-button")
+  .addEventListener("click", (event) => {
+    const button = event.target;
 
-  button.style.backgroundColor = "#fff";
+    button.style.backgroundColor = "#fff";
 
-  setTimeout(() => {
+    setTimeout(() => {
       button.style.backgroundColor = "#4c759f";
-  }, 150);
+    }, 150);
+  });
+
+document
+  .querySelector(".popup-subscribe-button")
+  .addEventListener("click", (event) => {
+    const button = event.target;
+
+    button.style.backgroundColor = "#fff";
+
+    setTimeout(() => {
+      button.style.backgroundColor = "#4c759f";
+    }, 150);
+  });
+
+/*------- Popup window ------*/
+document.addEventListener("DOMContentLoaded", () => {
+  const overlay = document.querySelector(".popup-overlay");
+  const popupContainer = document.querySelector(".popup-container");
+  const popupClose = document.getElementById("popup-close");
+  const subscribeButton = document.querySelector(".popup-subscribe-button");
+  const emailInput = document.getElementById("popup-email");
+  const acceptPolicyCheckbox = document.getElementById("popup-accept-policy");
+
+  const showPopup = () => {
+    popupContainer.style.display = "block";
+    overlay.style.display = "block";
+  };
+
+  const closePopup = () => {
+    popupContainer.style.display = "none";
+    overlay.style.display = "none";
+  };
+
+  setTimeout(showPopup, 100);
+
+  popupClose.addEventListener("click", closePopup);
+  overlay.addEventListener("click", closePopup);
 });

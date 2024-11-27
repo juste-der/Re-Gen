@@ -32,9 +32,24 @@
     />
     <title>ReGen Officiella Webbplats</title>
     <link rel="icon" type="favicon" href="/icons/favicon.ico">
-    
   </head>
   <body>
+    <div class="popup-overlay"></div>
+    <div class="popup-container">
+      <div class="popup">
+        <button id="popup-close">&times;</button>
+        <h6>Återställ skogar med din förbokning<br></h6>
+        <p>Förbeställ idag – varje order bidrar till återplantering och skydd av biologisk mångfald. 
+            Tillsammans gör vi skillnad för framtiden.</p>
+        <label for="popup-email">Din emailadress</label>
+        <input type="email" id="popup-email" placeholder="example@example.com">
+        <div class="popup-checkbox">
+          <input type="checkbox" id="popup-accept-policy">
+          <label for="popup-accept-policy">Jag accepterar <a href="#" class= integrity-policy>integritetspolicyn</a></label>  
+        </div>
+        <button class="popup-subscribe-button">REGISTRERA DIG  <i class="fa-solid fa-angle-right"></i></button>
+      </div>
+    </div>
     <div class="header">
       <div class="hamburger-btn">
         <img src="/icons/hamburger.svg" alt="Side Menu" onclick="openNav()" />
@@ -143,7 +158,7 @@
         Med hög kvalitativa material och miljötänkande produktionsprocesser.
     </p>
     <div class="our-history">
-      <img src="/images/Våran historia.png" alt="Our history image">
+      <img src="/images/Historia.png" alt="Our history image">
       <div class="our-history-content">
         <h2>REGENS HISTORIA</h2>
       <p>ReGen föddes ur en passion för att skapa möbler som förenar tidlös design och hållbarhet. Inspirerade av nordisk natur och hantverk använder vi ekologiska material som björk och återvunna resurser.

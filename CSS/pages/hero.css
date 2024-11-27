@@ -19,7 +19,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: var(--color-white);
   z-index: 1;
   gap: 1rem;
 }
@@ -34,38 +34,21 @@
   left: 13%;
   width: 18rem;
   text-align: left;
+  gap: 1rem;
 }
 .hero-banner-content h2,
 .our-history-content h2 {
-  font-size: 32px;
-  font-weight: 500;
-  line-height: 50px;
+  font-size: var(--font-size-XL);
+  font-weight: var(--font-weight-medium);
+  line-height: 3rem;
   text-align: center;
+  width: 12rem;
 }
 .our-history-content p {
-  font-size: 18px;
+  font-size: var(--font-size-small);
   font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
-}
-
-.hero-banner button,
-.our-history button {
-  background-color: transparent;
-  padding: 0.6rem;
-  height: 3rem;
-  color: #fff;
-  cursor: pointer;
-  font-size: var(--font-size-xsmall);
-  border: 0.1rem solid var(--color-white);
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-.hero-banner button {
-  width: 11.5rem;
-}
-
-.our-history button {
-  width: 18rem;
+  font-weight: var(--font-weight-regular);
+  line-height: 1.5rem;
 }
 
 .hero-quote {
@@ -74,7 +57,7 @@
 }
 
 .hero-quote p {
-  font-size: 1.5rem;
+  font-size: var(--font-size-large);
   line-height: 1.5;
   color: #fff;
   margin: 0;
@@ -83,7 +66,7 @@
   .hero-banner img,
   .our-history img {
     width: 200%;
-    max-height: 774px;
+    max-height: 48rem;
     object-fit: cover;
     transform: translate(-50%);
   }
@@ -109,13 +92,14 @@
     width: 23rem;
     align-items: baseline;
   }
-  .hero-banner-content h2 {
+  .hero-banner-content h2,
+  .our-history-content h2 {
     font-size: var(--font-size-XL);
   }
-  .hero-banner-content button {
-    font-size: var(--font-size-medium);
-    width: 14rem;
-    height: 3rem;
+  .our-history-content p {
+    font-size: var(--font-size-xxsmall);
+    line-height: 1.5;
+    width: 15rem;
   }
   .our-history-content {
     width: 20rem;

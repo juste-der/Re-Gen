@@ -317,7 +317,9 @@
     }
   
     .sustainability {
+      justify-content: center;
       flex-direction: row;
+      margin: 1rem;
       gap: 1rem;
     }
   
@@ -328,7 +330,7 @@
   
     .commitment button,
     .wood button {
-      width: 25%;
+      width: 50%;
       bottom: 7rem;
     }
   
@@ -541,6 +543,14 @@
       width: 50%;
       bottom: 5rem;
       left: 2rem;
+    }
+  }
+
+  @media (min-width: 900px) {
+    .commitment button,
+    .wood button {
+      width: 25%;
+      bottom: 7rem;
     }
   }
   
